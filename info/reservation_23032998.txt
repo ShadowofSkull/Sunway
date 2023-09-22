@@ -1,0 +1,20 @@
+2023-06-30|Slot 4|WILLIAM LEE|williamlee@gmail.com|0123456789|2
+2023-07-30|Slot 4|EMILY TAN|emilytan@hotmail.com|0198765432|4
+2023-07-30|Slot 4|BENJAMIN LIM|benjaminlim@yahoo.com|0167890123|1
+2023-07-30|Slot 4|SARAH GOH|sarahgoh@gmail.com|0134567890|3
+2023-07-30|Slot 4|DAVID NG|davidng@yahoo.com|0178901234|4
+2023-07-30|Slot 4|LIM YI LING|limyling@gmail.com|0123456789|2
+2023-07-30|Slot 4|NG KAI XIN|ngkaixin@yahoo.com|0198765432|3
+2023-07-30|Slot 4|WONG MENG HUI|wongmhui@hotmail.com|0167890123|4
+2023-07-30|Slot 3|CHAN WEI JIE|chanwjie@gmail.com|0134567890|2
+2023-06-27|Slot 2|TAN AI YEE|tanaiyee@yahoo.com|0178901234|1
+2023-06-16|Slot 1|LEE JUN WEI|leejunwei@gmail.com|0145678901|3
+2023-06-20|Slot 4|TAN HUI MIN|tanhmin@hotmail.com|0112345678|2
+2023-06-26|Slot 2|GOH KOK WEI|gohkw@yahoo.com|0189076543|4
+2023-06-17|Slot 1|LIM YI XUAN|limyxuan@gmail.com|0156789012|3
+2023-06-29|Slot 3|CHUAH AI YING|chuahaiying@hotmail.com|0123456789|1
+2023-06-24|Slot 2|TAN MENG KUAN|tanmkuan@yahoo.com|0198765432|4
+2023-06-14|Slot 1|ONG JIA HUI|ongjh@hotmail.com|0167890123|3
+2023-06-13|Slot 3|TEOH CHEE YEN|teohcheeyen@gmail.com|0134567890|2
+2023-06-12|Slot 2|LIM AI LING|limailing@yahoo.com|0178901234|4
+2023-06-11|Slot 1|TAN YU JIN|tanyujin@gmail.com|0145678901|3
