@@ -9,4 +9,4 @@ From now on everything will be categorised by branches.
 2. oop-java
    - All the java exercises required to do
 3. SAC_2023_bot
-  - A fintech discord bot made during Sunway Agility Challenge 2023
+   - A fintech discord bot made during Sunway Agility Challenge 2023
