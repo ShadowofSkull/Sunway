@@ -5,6 +5,6 @@ All works and projects during uni period
 From now on everything will be categorised by branches.  
 
 1. programming_principles
-   - made a restaurant reservation management system
+   - Made a restaurant reservation management system for final project
 2. oop-java
-   - all the java exercises required to do
+   - All the java exercises required to do
