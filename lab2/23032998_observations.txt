@@ -1,0 +1,5 @@
+1. Observe effect of two class in one element:
+2. I put class="bold size" in the element font is the class that make it bold while size change the font
+3. When two classes is added to one element the element obtain both classes' properties
+4. So long the element has the class it will get the style changes of it
+5. It is a great method enclosed different styles in a class and applying them when needed.
