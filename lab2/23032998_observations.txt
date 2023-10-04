@@ -1,5 +1,17 @@
 1. Observe effect of two class in one element:
-2. I put class="bold size" in the element font is the class that make it bold while size change the font
-3. When two classes is added to one element the element obtain both classes' properties
-4. So long the element has the class it will get the style changes of it
-5. It is a great method enclosed different styles in a class and applying them when needed.
+2. I put class="class1 class2" in the element, class1 set font size to 100px and bold while class2 set font size to 300px
+3. When two classes is added to one element the element obtain both classes' properties, however the last defined class which is class2 will override class1's font size
+4. So long the element has the class it will get the style changes of it, and if there's conflicting properties the last defined class will override previous classes properties
+5. It is a great method to create different styles in a class and applying them when needed.
+
+1. Same id in two different elements
+2. For two different li element i apply the same id for both of them. 
+3. The two element inherit the properties of css for the specific id
+4. When the website compile the css it apply to the element separately so long it match the id
+5. Although it is better to have one element with the id, css styles will still apply even if you repeat the id in different element
+
+1. Create two classes with same name
+2. The same element has the two same name apply to it
+3. The class that is defined later in the css will override conflicting properties in the class defined before it. However, non-confliciting properties will be inherited from both
+4. CSS disregard the name of the class and priotise the sequence the class is defined.  
+5. It is possible to define two or more classes with the same name

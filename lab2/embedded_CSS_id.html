@@ -44,12 +44,28 @@
                 font-size: 0.75em;
                 font-style: italic;
             }
-            .class1{
-                font-size: 100px;
+            .company{
+                font-weight: bold;
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: 1.25em;
+                color: red;
             }
-            .class2{
+            #ul1{
+                color: green;
+            }
+            #ul2{
+                color: blue;
+            }
+            #ul3{
+                color: violet;
+            }
+            /* .class{
                 font-size: 300px;
+                font-weight: bold;
             }
+            .class{
+                font-size: 100px;
+            } */
         </style>
     </head>
     <body>
@@ -65,16 +81,16 @@
             </b>
         </nav>
         <main>
-            <!-- <div class="class1 class2">test</div> -->
+            <div class="class">test</div>
             <h2>New Media and Web Design</h2>
-            <p>Trillium Media Design will bring your company&rsquo;s web
+            <p><span class="company">Trillium Media Design</span> will bring your company&rsquo;s web
             presence to the next level. We offer a comprehensive range of
             24
             services.</p>
             <ul>
-                <li>Website Design</li>
-                <li>Interactive Animation</li>
-                <li>E-commerce Solutions</li>
+                <li id="ul1">Website Design</li>
+                <li id="ul2">Interactive Animation</li>
+                <li id="ul3">E-commerce Solutions</li>
                 <li class="feature">Usability Studies</li>
                 <li class="feature">Search Engine Optimisation</li>
             </ul>
