@@ -2,6 +2,10 @@ nav b a{
     text-decoration: none;
     font-size: 1.25em;
     font-weight: bolder;
+    padding: 5px;
+    margin-right: 5px;
+    position: relative;
+    background-color: green;
 }
 body{
     background-color: #e6e6fa;
@@ -16,6 +20,8 @@ body{
 }
 header{
     height: 50px;
+    margin-bottom: 10px;
+    position: relative;
     background-color: #191970;
     color: #e6e6fa;
     line-height: 200%;
