@@ -1,0 +1,97 @@
+nav b a{
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: bolder;
+    padding: 5px;
+    margin-right: 5px;
+    position: relative;
+    background-color: green;
+}
+body{
+    /* background-color: #e6e6fa; */
+    color: #191970;
+    font-family: Arial, Verdana, sans-serif;
+    background-image: url(../images/bg\ svg.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.alignText{
+    margin-right: auto;
+    width: 100%;
+}
+header{
+    width: 100em;
+    height: 6em;
+    margin-bottom: 10px;
+    position: relative;
+    /* color: #e6e6fa; */
+    line-height: 500%;
+    font-family: sans-serif, Georgia, 'Times New Roman';
+    text-shadow: 2px 3px 3px greenyellow;
+    background-image: url(../images/single\ flower\ bg\ svg.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 80%;
+    /* background-size: cover; */
+    text-align: center;
+    object-fit: cover;
+    
+}
+main h2{
+    /* background-color: rgb(188, 139, 244); */
+    color: #191970;
+    line-height: 200%;
+    font-family: sans-serif, Georgia, 'Times New Roman';
+    text-align: center;
+    padding-right: 40em;
+
+}
+
+.h2bg {
+    background-image: url(../images/single\ flower\ bg\ svg.svg);
+    background-repeat: no-repeat;
+    width: 100em;
+    height: 3em;
+    object-fit: cover;
+    background-position: 0% 80%;
+}
+
+p{
+    font-size: 0.9em;
+    text-indent: 3em;
+}
+
+ul li{
+    font-weight: bold;
+}
+.feature{
+    color: #C70000;
+}
+footer{
+    color: #333333;
+    font-size: 0.75em;
+    font-style: italic;
+    display: inline-block;
+}
+.company{
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25em;
+    color: red;
+}
+#ul1{
+    color: green;
+}
+#ul2{
+    color: blue;
+}
+#ul3{
+    color: violet;
+}
+
+.footer_flower{
+    position: relative;
+    width: 10em;
+    height: 10em;
+    padding-left: 80em;
+    
+}
