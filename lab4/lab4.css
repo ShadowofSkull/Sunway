@@ -1,0 +1,55 @@
+body{
+    background-color: black
+    
+}
+
+header{
+    background-color: grey;
+    padding: 1rem 0rem;
+
+    color: black;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.content{
+    width: auto;
+    height: 30em;
+    color: white;
+    font-size: 2em;
+    background-color: aqua;
+    overflow: auto;
+}
+
+img{
+    float: left;
+    width: 15em;
+    height: 12em;
+    margin: 1em;
+}
+
+p{
+    /* clear: right; */
+}
+
+.space{
+    float: none;
+}
+
+.lisa{
+    float: right;
+}
+
+.task3{
+    background-color: green;
+    overflow: auto;
+    width: 10em;
+    height: 5em;
+}
+
+.space1{
+    float: right;
+}
+.space2{
+    float: left;
+}
