@@ -1,0 +1,33 @@
+/* CSS HEX */
+--light-orange: #f9dbbdff;
+--space-cadet: #25283dff;
+--french-blue: #0075c4ff;
+--aquamarine: #70f8baff;
+--brown: #a3320bff;
+
+/* CSS HSL */
+--light-orange: hsla(30, 83%, 86%, 1);
+--space-cadet: hsla(233, 24%, 19%, 1);
+--french-blue: hsla(204, 100%, 38%, 1);
+--aquamarine: hsla(153, 91%, 71%, 1);
+--brown: hsla(15, 87%, 34%, 1);
+
+/* template2 */
+--text: #040401;
+--background: #ffffff;
+--background: #F9F7FA;
+--primary: #8582e8;
+--secondary: #f5f6d0;
+--accent: #2c27d3;
+
+--text: rgb(4, 4, 1);
+--background: rgb(255, 255, 255);
+--primary: rgb(133, 130, 232);
+--secondary: rgb(245, 246, 208);
+--accent: rgb(44, 39, 211);
+
+--text: hsl(60, 60%, 1%);
+--background: hsl(0, 0%, 100%);
+--primary: hsl(242, 69%, 71%);
+--secondary: hsl(62, 68%, 89%);
+--accent: hsl(242, 69%, 49%);
