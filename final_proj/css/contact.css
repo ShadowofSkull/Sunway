@@ -1,0 +1,46 @@
+main {
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+#container__form {
+  display: flex;
+  margin: 20px;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5%;
+  width: 50%;
+  height: 80%;
+  max-width: 500px;
+  max-height: 400px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+
+}
+
+label {
+  line-height: 1.9rem;
+}
+
+.submit {
+  margin-top: 0.6rem;
+  font-weight: bold;
+}
+
+fieldset {
+  padding: 20px 40px;
+  margin: auto;
+}
