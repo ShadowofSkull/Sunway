@@ -13,7 +13,7 @@
   <div class="top-bar">
     <header>
       <a href="./index.html">
-        <img class="logo" src="./images/logo.svg" alt="logo">
+        <img class="logo" src="./images/logo-nobg.svg" alt="logo">
         <h1>E-commerce</h1>
       </a>
     </header>
@@ -53,10 +53,19 @@
           </div>
 
           <div class="form-control">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Enter report subject" required />
+          </div>
+
+          <div class="form-control">
             <label for="message">Message</label>
             <textarea id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
           </div>
-          <input type="submit" value="Send" class="submit" />
+
+          <div class="form-control">
+
+            <input type="submit" value="Send" class="submit" />
+          </div>
         
       </form>
     </div>

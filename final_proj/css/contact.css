@@ -21,7 +21,10 @@ form {
   height: 80%;
   max-width: 500px;
   max-height: 400px;
+  min-width: 300px;
 }
+
+
 
 input,
 textarea {
@@ -31,6 +34,11 @@ textarea {
 
 }
 
+textarea{
+  height: 70px;
+  margin-bottom: 20px;
+}
+
 label {
   line-height: 1.9rem;
 }
@@ -38,6 +46,9 @@ label {
 .submit {
   margin-top: 0.6rem;
   font-weight: bold;
+  background-color: rgb(235, 233, 233);
+  border: transparent;
+
 }
 
 fieldset {
