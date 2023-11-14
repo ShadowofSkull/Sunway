@@ -142,7 +142,7 @@ input,textarea{
   color: #ffffff;
   border: none;
   padding: 0.3rem;
-
+  outline: none;
 }
 
 input[type=submit]{
