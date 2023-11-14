@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: white;
+            margin: 30px;
+
+        }
+        /* Case1 */
+        .case1 {
+            display: flex;
+            flex-direction: row;
+            writing-mode: horizontal-tb;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .item1 {
+            background-color: #e84d51;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .item2 {
+            background-color: #2f97ff;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        .item3 {
+            background-color: #7ed636;
+            padding: 10px;
+            margin: 10px;
+
+        }
+        /* Case2 */
+        .case2 {
+            display: flex;
+            flex-direction: row;
+            writing-mode: vertical-rl;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+
+        /* Case3 */
+        .case3 {
+            display: flex;
+            flex-direction: row;
+            writing-mode: vertical-lr;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+        /* Case4 */
+        .case4 {
+            display: flex;
+            flex-direction: column;
+            writing-mode: horizontal-tb;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+     
+        /* Case5 */
+        .case5 {
+            display: flex;
+            flex-direction: column;
+            writing-mode: vertical-rl;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        /* Case6 */
+        .case6 {
+            display: flex;
+            flex-direction: column;
+            writing-mode: vertical-lr;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+        /* Case7 */
+        .case7 {
+            display: flex;
+            flex-direction: row-reverse;
+            writing-mode: horizontal-tb;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+        /* Case 8*/
+        .case8 {
+            display: flex;
+            flex-direction: row-reverse;
+            writing-mode: vertical-rl;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+        /* Case9 */
+        .case9 {
+            display: flex;
+            flex-direction: row-reverse;
+            writing-mode: vertical-lr;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+        /* Case10 */
+        .case10 {
+            display: flex;
+            flex-direction: column-reverse;
+            writing-mode: horizontal-tb;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+        /* Case 11 */
+        .case11 {
+            display: flex;
+            flex-direction: column-reverse;
+            writing-mode: vertical-rl;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+        /* Case 12 */
+        .case12 {
+            display: flex;
+            flex-direction: column-reverse;
+            writing-mode: vertical-lr;
+            border: 3px solid rgb(60, 60, 60, 10%);
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- case1 -->
+    Case1
+    <div class="case1">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case2 -->
+    Case2
+    <div class="case2">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case3 -->
+    Case3
+    <div class="case3">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case4 -->
+    Case4
+    <div class="case4">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case5 -->
+    case5
+    <div class="case5">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case6 -->
+    case6
+    <div class="case6">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case7 -->
+    <div class="case7">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case8 -->
+    <div class="case8">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case9 -->
+    <div class="case9">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case10 -->
+    <div class="case10">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case11 -->
+    <div class="case11">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+    <!-- case12 -->
+    <div class="case12">
+        <div class="item1">item1<br> line 2</div>
+        <div class="item2">item2<br> line 2</div>
+        <div class="item3">item3<br> line 2</div>
+    </div>
+</body>
+
+</html>

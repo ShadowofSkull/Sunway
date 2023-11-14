@@ -1,0 +1,34 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    height: 300px;
+    width: 500px;
+    border-radius: 5%;
+}
+
+#login-but{
+    background-color: (235, 233, 233);
+    border: transparent;
+}
+
+.form-control{
+    padding: 10px;
+}
