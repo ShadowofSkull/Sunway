@@ -38,17 +38,3 @@ textarea {
 label {
   line-height: 1.9rem;
 }
-
-.submit {
-  margin-top: 0.6rem;
-  font-weight: bold;
-  /* background-color: rgb(235, 233, 233); */
-  background-color: rgb(235, 233, 233);
-}
-
-fieldset {
-  padding: 20px 40px;
-  margin: auto;
-  height: 22rem;
-  /* background-color: #F9F7FA; */
-}
