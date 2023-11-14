@@ -56,3 +56,5 @@
 ### Notes
 - gotta increase max size of all forms
 - reduce min size
+- do parallax
+- make content start beneath navbar
