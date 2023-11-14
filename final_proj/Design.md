@@ -52,3 +52,7 @@
 
 - About Page (free)
   - Just info of website
+
+### Notes
+- gotta increase max size of all forms
+- reduce min size
