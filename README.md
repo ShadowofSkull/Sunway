@@ -12,7 +12,7 @@ From now on everything will be categorised by branches.
    - A fintech discord bot made during Sunway Agility Challenge 2023
 
 ## QuickStart
-- To clone specific project use
+- To clone specific project to use
 ```shell
-git clone --single-branch --branch development https://github.com/ShadowofSkull/Sunway.git
+git clone --single-branch --branch development https://github.com/ShadowofSkull/Sunway.git](https://github.com/ShadowofSkull/Sunway.git)https://github.com/ShadowofSkull/Sunway.git
 ```
