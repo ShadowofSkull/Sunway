@@ -10,3 +10,9 @@ From now on everything will be categorised by branches.
    - All the java exercises required to do
 3. SAC_2023_bot
    - A fintech discord bot made during Sunway Agility Challenge 2023
+
+## QuickStart
+- To clone specific project use
+```shell
+git clone --single-branch --branch development https://github.com/ShadowofSkull/Sunway.git
+```
