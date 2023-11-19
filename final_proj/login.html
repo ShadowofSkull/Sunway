@@ -41,7 +41,7 @@
     <main>
         <div class="login-container">
             <h2>Login</h2>
-            <form action="" method="post">
+            <form action="" method="post" id="login">
                 <div class="form-control">
                     <label for="username">Username</label>
                     <input type="text" name="username" placeholder="Enter your username" required>
@@ -62,6 +62,9 @@
 
                     </p>
                 </div>
+                
+                <div class="error"></div>
+
                 <div class="form-control login-but">
 
                     <input type="submit" name="submit" value="Login" id="login-but" class="button">
