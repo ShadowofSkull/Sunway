@@ -58,3 +58,5 @@
 - reduce min size
 - do parallax
 - make content start beneath navbar
+- hover send turn word white color
+- input chg black to grey
