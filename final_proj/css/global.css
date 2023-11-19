@@ -1,27 +1,23 @@
-/* Basic */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Arial, Verdana, Tahoma, "Trebuchet MS", sans-serif;
+  color: #040401;
 }
 
-html {
+html{
   width: 100%;
   height: 100%;
 }
 
 body {
-  font-family: Arial, Verdana, Tahoma, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   color: #040401;
   line-height: 1.5;
-  /* background-color: #8582e8; */
-}
-
-main {
-  width: 100%;
-  height: 200%;
   background-color: #8582e8;
 }
 
@@ -29,134 +25,164 @@ footer {
   width: 100%;
   height: 10%;
   display: flex;
-  border-top: #f5f6d0;
+  margin-top: auto;
   background-color: #f9f7fa;
   justify-content: space-evenly;
 }
 
-/* index page */
-
-.top-bar {
-  display: flex;
-  align-items: center;
-  background-color: #f9f7fa;
-  width: 100%;
-  height: 10%;
-  padding: 10px;
-    
-}
-
-nav {
-  display: flex;
-  width: 40%;
-  align-items: center;
-  margin: 10px;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  width: 60%;
-  font-size: 0.65rem;
-  margin: 10px;
+img {
+  width: 5rem;
+  height: 5rem;
 }
 
 a {
   text-decoration: none;
-  min-width: 50px;
-  max-width: 300px;
-  max-height: 70px;
 }
 
-ul {
+
+/* index page */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+
+/* Add another layer to apply backdrop filter effect */
+header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  z-index: -1;
+}
+
+.logo{
+  font-size: 2.5rem;
+  font-weight:700;
+}
+
+.logo a{
   display: flex;
-  justify-content: right;
   align-items: center;
-  list-style-type: none;
-  margin-top: 10px;
-
 }
 
-li {
-  width: 100%;
-  max-width: 100px;
-  height: 100%;
-  min-width: 50px;
-  min-height: 80px;
-  align-items: center;
-  justify-self: center;
+nav a{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 2.5rem;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-}
-nav img {
-  min-width: 40px;
-  min-height: 60px;
-  max-width: 80px;
-  max-height: 80px;
-}
-nav img:hover {
-  border: 1px solid #2c27d3;
+.hide{
+  display: none;
 }
 
-@media(min-width: 500px){
-  li{
-    margin: 10px;
+.hamburger{
+  position: absolute;
+  right: 5%;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+img#hamburger{
+  width: 5rem;
+  height: 4rem;
+}
+
+/* Tablet and phone */
+@media (max-width: 1024px) {
+  .hamburger{
+    display: block;
+
   }
-}
-header img {
-  min-width: 20px;
-  min-height: 50px;
-}
-header a {
-  display: flex;
-}
 
-header a:hover {
-  background-color: #f9f7fa;
-}
+  nav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
-.logo {
-  min-width: 60px;
-  max-width: 20%;
+  nav a{
+    border-bottom: 1px solid #777676;
+  }
 }
 
 /* Main */
 main {
-  display: flex;
+  width: 100%;
+  height: 200%;
+  margin-top: auto;
 }
 
-form{
+
+
+
+/* Form */
+form {
   background-color: transparent;
   height: 100%;
-  width:100%;
+  width: 100%;
   border-radius: 6px;
 }
 
-input,textarea{
+input,
+textarea {
   border-radius: 6px;
-  background-color: #040401;
+  background-color: #33331e;
   color: #ffffff;
-  border: none;
   padding: 0.3rem;
   outline: none;
+  font-weight: 200;
 }
 
-input[type=submit]{
-  background-color: #C60CC6;
+input[type="submit"] {
+  background-color: #c60cc6;
   color: #040401;
   font-weight: bold;
-  border: transparent;
-
 }
 
-label{
+input[type="submit"]:hover {
+  background-color: #a018a0;
+  color: #ffffff;
+}
+
+label {
   font-size: 1rem;
+  font-weight: 500;
 }
 
-.underline-link a:hover{
+.underline-link a:hover {
   text-decoration: underline;
+}
+
+.form-control.error input, .form-control.error textarea{
+  border: 2px solid #f32750;
+}
+
+.form-control.success input, .form-control.success textarea{
+  border: 2px solid #0dd17c;
+}
+
+.form-control .error{
+  color: red;
+  font-size: 0.7rem;
+  height: 0.65rem;
 }
