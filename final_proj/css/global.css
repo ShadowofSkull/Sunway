@@ -3,12 +3,12 @@
   padding: 0;
   margin: 0;
   font-family: Arial, Verdana, Tahoma, "Trebuchet MS", sans-serif;
-  color: #040401;
+  color: black;
 }
 
 html {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -17,10 +17,7 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 100%;
-  color: #040401;
-  line-height: 1.5;
-  background-color: #8582e8;
-  overflow: hidden;
+  background-color: #8abb7c;
 }
 
 footer {
@@ -33,8 +30,10 @@ footer {
 }
 
 img {
-  width: 5rem;
-  height: 5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 a {
@@ -69,6 +68,8 @@ header::before {
 }
 
 .logo {
+  width: 5rem;
+  height: 5rem;
   font-size: 1.8rem;
   font-weight: 700;
 }
@@ -82,6 +83,13 @@ nav a {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0.5rem 1.2rem;
+  width: ;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active{
+  color: #ffffff;
 }
 
 .hide {
@@ -140,9 +148,13 @@ main {
 
 /* Form */
 form {
-  background-color: transparent;
   height: 100%;
   width: 100%;
+  border-radius: 6px;
+}
+
+.form-container{
+  background-color: #E5E3D0;
   border-radius: 6px;
 }
 
@@ -157,14 +169,18 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #c60cc6;
-  color: #040401;
+  /* background-color: #c60cc6; */
+  background-color: #7A7A45;
+  height: 2rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #a018a0;
-  color: #ffffff;
+  /* background-color: #a018a0; */
+  background-color: #9b9b54;
+  /* #a7a757 */
+  color: white;
 }
 
 
@@ -175,6 +191,11 @@ label {
 
 .underline-link a:hover {
   text-decoration: underline;
+}
+
+.form-control{
+  padding: 5px;
+
 }
 
 .form-control.error input,

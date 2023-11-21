@@ -3,6 +3,25 @@ const nav = document.querySelector("nav");
 const contactForm = document.getElementById("contact-form");
 const login = document.getElementById("login");
 const register = document.getElementById("register");
+const slogan = document.querySelector(".slogan");
+const carrot = document.querySelector("#carrot");
+const cauliflower = document.querySelector("#cauliflower");
+const onion = document.querySelector("#onion");
+
+// Animation effect for the slogan
+try {
+  window.addEventListener("scroll", () => {
+    let value = window.scrollY;
+    slogan.style.marginLeft = value * -2.0 + "px";
+    carrot.style.left = value * 3.0 + "px";
+    cauliflower.style.left = value * 3.0 + "px";
+    onion.style.left = value * -2.0 + "px";
+  
+  });
+  
+} catch (error) {
+  console.log(error);
+}
 
 // hide the navigation bar on mobile/tablet at the start
 if (screen.width <= 1024) {

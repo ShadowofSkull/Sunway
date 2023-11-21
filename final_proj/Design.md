@@ -17,7 +17,7 @@
 
 
 ## Design (og)
-
+- website that sell organic vegetables
 - Every Page (most)
 
   - Logo that go home page on every page
