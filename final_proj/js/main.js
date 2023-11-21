@@ -8,14 +8,14 @@ const carrot = document.querySelector("#carrot");
 const cauliflower = document.querySelector("#cauliflower");
 const onion = document.querySelector("#onion");
 
-// Animation effect for the slogan
+// Animation effect for the hero/intro section
 try {
   window.addEventListener("scroll", () => {
     let value = window.scrollY;
     slogan.style.marginLeft = value * -2.0 + "px";
-    carrot.style.left = value * 3.0 + "px";
-    cauliflower.style.left = value * 3.0 + "px";
-    onion.style.left = value * -2.0 + "px";
+    carrot.style.left = value * 1.0 + "px";
+    cauliflower.style.left = value * 2.5 + "px";
+    onion.style.left = value * -1.5 + "px";
   
   });
   
@@ -34,6 +34,7 @@ function toggleNav() {
   console.log("clicked");
 }
 
+// To display error to user on the page
 const setError = (element, message) => {
   const formControl = element.parentElement;
   const errorDisplay = formControl.querySelector(".error");
@@ -43,6 +44,7 @@ const setError = (element, message) => {
   formControl.classList.remove("success");
 };
 
+// To display success to user on the page
 const setSuccess = (element) => {
   const formControl = element.parentElement;
   const errorDisplay = formControl.querySelector(".error");
@@ -52,6 +54,7 @@ const setSuccess = (element) => {
   formControl.classList.remove("error");
 };
 
+// Validation for login
 const validateLogin = () => {
   const username = login.querySelector("#username");
   const password = login.querySelector("#password");
@@ -72,6 +75,7 @@ const validateLogin = () => {
   }
 };
 
+// Validation for contact form
 const validateContact = () => {
   const name = contactForm.querySelector("#name");
   const email = contactForm.querySelector("#email");
@@ -100,6 +104,7 @@ const validateContact = () => {
   }
 };
 
+// Validation for registration
 const validateRegister = () => {
   const username = register.querySelector("#username");
   const email = register.querySelector("#email");
@@ -138,8 +143,8 @@ const validateRegister = () => {
   }
 };
 
+// login validation
 try {
-  // login validation
   login.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -149,8 +154,8 @@ try {
   console.log(error);
 }
 
+// contact form validation
 try {
-  // contact form validation
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -160,8 +165,8 @@ try {
   console.log(error);
 }
 
+// register validation
 try {
-  // register validation
   register.addEventListener("submit", (e) => {
     e.preventDefault();
 
