@@ -31,8 +31,9 @@ if (screen.width <= 1024) {
 // Toggling the navigation bar on mobile/tablet
 function toggleNav() {
   nav.classList.toggle("hide");
-  console.log("clicked");
 }
+
+
 
 // To display error to user on the page
 const setError = (element, message) => {

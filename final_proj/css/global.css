@@ -93,11 +93,12 @@ nav a span {
   transition: 0.5s;
 }
 
-nav a:hover span,
-nav a.active span {
+nav a:hover span{
   transform: scale(1);
   opacity: 1;
 }
+
+
 
 nav a#nav-login {
   border: 1px solid #e5e3d0;
