@@ -1,0 +1,90 @@
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.shop{
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+
+
+.filter{
+    width: 35rem;
+    min-width: 25rem;
+    height: 60vh;
+    border-radius: 10px;
+    background-color: #E5E3D0;
+    margin: 5rem 2rem;
+    position: sticky;
+    top: 10rem;
+    left: 4rem;
+}
+
+.featured{
+    margin-bottom: 10rem;
+}
+
+.choice{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 0 1rem 3rem;
+}
+
+.choice h2{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.input-control{
+    padding: 0.5rem;
+}
+
+input{
+    width: 1rem;
+    height: 1rem;
+}
+
+label{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+.range{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.price input{
+    width: 8rem;
+    height: 2rem;
+    padding: 0;
+}
+.range span{
+    font-size: 2rem;
+}
+
+#filter-but{
+    width: 4rem;
+    height: 2rem;
+}
+
+.choice.submit{
+    display: flex;
+    align-items: center;
+    
+    padding: 1rem 1.8rem 3rem 1rem;
+}
+
+
+

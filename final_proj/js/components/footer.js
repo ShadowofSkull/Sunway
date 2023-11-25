@@ -1,49 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce</title>
-
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/cart.css">
-    <script defer src="./js/main.js"></script>
-
-</head>
-
-<body>
-
-    <header>
-        <div class="header-wrapper">
-
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="./images/logo-nobg.svg" alt="logo">
-                    <h1>Forrest</h1>
-                </a>
-            </div>
-
-            <label for="hamburger" class="hamburger" onclick="toggleNav()">
-                <img src="./images/hamburger.svg" alt="hamburger" id="hamburger">
-            </label>
-
-            <nav>
-                <a href="./index.html" class="active">Home <span></span></a>
-                <a href="./shop.html">Shop <span></span></a>
-                <a href="./about.html">About Us <span></span></a>
-                <a href="./contact.html">Contact Us <span></span></a>
-                <a href="./cart.html">Cart <span></span></a>
-                <a href="./login.html" id="nav-login">Login <span></span></a>
-            </nav>
-        </div>
-    </header>
-
-
-    <main>
-        
-    </main>
-
+class Footer extends HTMLElement{    
+    connectedCallback(){
+        this.innerHTML = `
     <footer>
         <div class="col">
             <span class="brand"><img src="./images/logo-nobg.svg" alt="">Forrest</span>
@@ -96,7 +53,25 @@
         </div>
         
     </footer>
+        `
+    }
+}
 
-</body>
+window.customElements.define("app-footer", Footer);
 
-</html>
+// Sample
+// const template = document.createElement('template');
+// template.innerHTML = `
+//     <div></div> 
+// `;
+
+// class Sample extends HTMLElement{
+//     constructor(){
+//         super();
+//         this.attachShadow({mode: 'open'});
+//         this.shadowRoot.appendChild(template.content.cloneNode(true));
+//         this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name')
+//     }
+// }
+
+// window.customElements.define("app-sample", Sample);

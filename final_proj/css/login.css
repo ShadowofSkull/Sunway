@@ -2,7 +2,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    
 }
 
 .form-container{
@@ -13,14 +13,11 @@ main{
     justify-content: center;
   
     padding: 20px;
-    margin: 1rem;
-  
     height: 19rem;
     width: 100%;
     max-width: 25rem;
     min-width: 5rem;
   
-    background-color: #f9f7fa;
     border-radius: 6px;
 }
 

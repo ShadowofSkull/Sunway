@@ -17,6 +17,7 @@
 
 
 ## Design (og)
+- when click cart plus icon pop-up mini detail of product and allow quantity to add to cart
 - website that sell organic vegetables
 - Every Page (most)
 
