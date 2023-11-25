@@ -1,6 +1,7 @@
-class Footer extends HTMLElement{    
-    connectedCallback(){
-        this.innerHTML = `
+// Creating footer component to be reused in all pages
+class Footer extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
     <footer>
         <div class="col">
             <span class="brand"><img src="./images/logo-nobg.svg" alt="">Forrest</span>
@@ -20,13 +21,13 @@ class Footer extends HTMLElement{
                     <a href="https://www.instagram.com/"><img src="./images/svg/instagram.svg" alt="instagram"></a>
                     <a href="https://www.twitter.com/"><img src="./images/svg/twitter.svg" alt="twitter"></a>
                     <a href="https://www.youtube.com/"><img src="./images/svg/youtube.svg" alt="youtube"></a>
-    
+
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="footer-nav">
-                <h4>Navigation</h4>
+                <h4>See more</h4>
                 <a href="./index.html">Home</a>
                 <a href="./shop.html">Shop</a>
                 <a href="./about.html">About Us</a>
@@ -51,10 +52,10 @@ class Footer extends HTMLElement{
                 </p>
             </div>
         </div>
-        
+    
     </footer>
-        `
-    }
+        `;
+  }
 }
 
 window.customElements.define("app-footer", Footer);
@@ -62,7 +63,7 @@ window.customElements.define("app-footer", Footer);
 // Sample
 // const template = document.createElement('template');
 // template.innerHTML = `
-//     <div></div> 
+//     <div></div>
 // `;
 
 // class Sample extends HTMLElement{

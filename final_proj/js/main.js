@@ -8,7 +8,7 @@ const carrot = document.querySelector("#carrot");
 const cauliflower = document.querySelector("#cauliflower");
 const onion = document.querySelector("#onion");
 
-// Animation effect for the hero/intro section
+// Animation effect for the hero/intro section on index pg
 try {
   window.addEventListener("scroll", () => {
     let value = window.scrollY;

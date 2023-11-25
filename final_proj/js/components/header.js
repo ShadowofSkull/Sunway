@@ -1,3 +1,5 @@
+// Creating header component to be reused in all pages
+
 class Header extends HTMLElement{    
     connectedCallback(){
         this.innerHTML = `
