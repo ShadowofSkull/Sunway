@@ -5,19 +5,28 @@
   margin: 0;
   font-family: Arial, Verdana, Tahoma, "Trebuchet MS", sans-serif;
   color: black;
+  overflow: hidden;
 }
 
 html {
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 body {
   width: 100%;
   background-color: #8abb7c;
-  /* so footer stays at bottom */
+  /* so footer stays at bottom with margin-top auto*/
   display: flex;  
   flex-direction: column;
   min-height: 100vh;
+
+}
+
+/* Main */
+main {
+  width: 100%;
+  
 }
 
 img {
@@ -51,7 +60,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 999;
 }
 
 /* Add another layer to apply backdrop filter effect */
@@ -69,24 +78,38 @@ header {
 
 /* Logo */
 .logo {
-  width: 5rem;
-  height: 5rem;
-  font-size: 1.8rem;
+  width: clamp(20rem, 20vw, 50rem);
+  font-size: max(1.3rem, 2vw);
   font-weight: 700;
   margin-right: 1rem;
+}
+
+.logo img{
+  width: clamp(2rem, 15vw, 6rem);
 }
 
 .logo a {
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 /* Navbar */
+nav{
+  display: flex;
+  width: clamp(50vw, 60rem, 70vw);
+
+  align-items: center;
+}
+
 nav a {
-  font-size: 1.5rem;
+  font-size: max(1.5rem, 2vh);
   font-weight: 600;
-  margin: 0.5rem 1.2rem;
-  padding: 0.5rem 0.5rem;
+  /* width: clamp(15rem, 30vw, 20rem);
+  height: clamp(3rem, 8vh, 5rem); */
+  margin: 1rem 2rem 0 0;
+  padding: 0.2rem;
   transition: 0.3s ease;
   position: relative;
 }
@@ -112,12 +135,6 @@ nav a:hover span{
 }
 
 
-
-nav a#nav-login {
-  border: 1px solid #e5e3d0;
-  border-radius: 25px;
-}
-
 /* To hide navbar */
 .hide {
   display: none;
@@ -126,49 +143,16 @@ nav a#nav-login {
 .hamburger {
   position: absolute;
   right: 10%;
-  font-size: 2.5rem;
   cursor: pointer;
   display: none;
 }
 
 img#hamburger {
-  width: 5rem;
-  height: 4rem;
+  width: min(15vw,4rem);
 }
 
-/* Tablet and phone */
-@media (max-width: 1024px) {
-  .hamburger {
-    display: block;
-  }
 
-  header {
-    padding: 2%;
-  }
 
-  nav {
-    display: flex;
-
-    flex-direction: column;
-    text-align: left;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(50px);
-  }
-
-  nav a {
-    border-bottom: 1px solid #777676;
-  }
-}
-
-/* Main */
-main {
-  width: 100%;
-}
 
 /* Footer */
 footer {
@@ -310,10 +294,27 @@ textarea {
   font-weight: 200;
 }
 
-/* Styles for input type submit */
+button{
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: transparent;
+  width: 5rem;
+  height: 3rem;
+  color: black;
+  transition: 0.5s ease;
+}
+
+button:hover{
+  background-color: #7a7a45;
+  color: white;
+  border: none
+}
+
+/* Styles for input type submit*/
 input[type="submit"] {
   /* background-color: #c60cc6; */
   background-color: #7a7a45;
+  color: white;
   height: 2rem;
   font-weight: bold;
   cursor: pointer;
@@ -323,7 +324,7 @@ input[type="submit"]:hover {
   /* background-color: #a018a0; */
   background-color: #9b9b54;
   /* #a7a757 */
-  color: white;
+  color: black;
 }
 
 label {
@@ -355,4 +356,51 @@ label {
   color: red;
   font-size: 0.7rem;
   height: 0.65rem;
+}
+
+/* Tablet and phone */
+@media (max-width: 1024px) {
+
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  header {
+    padding: 2%;
+  }
+
+  .disable-scroll{
+    position: fixed;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    z-index: 998;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+  }
+
+  nav a {
+    width: 100vw;
+    height: 3rem;
+    padding: 0 2rem;
+    border-bottom: 1px solid #777676;
+  }
+
+  nav a span{
+    border-radius: 0px;
+  }
 }

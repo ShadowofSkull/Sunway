@@ -1,4 +1,5 @@
 // Initialise selector
+const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const contactForm = document.getElementById("contact-form");
 const login = document.getElementById("login");
@@ -7,6 +8,18 @@ const slogan = document.querySelector(".slogan");
 const carrot = document.querySelector("#carrot");
 const cauliflower = document.querySelector("#cauliflower");
 const onion = document.querySelector("#onion");
+
+// hide the navigation bar on mobile/tablet at the start
+try {
+  document.addEventListener("DOMContentLoaded", (e) => {
+    if (window.innerWidth <= 1024) {
+      nav.classList.toggle("hide");
+    }
+  });
+} catch (error) {
+  console.log(error);
+}
+
 
 // Animation effect for the hero/intro section on index pg
 try {
@@ -23,14 +36,12 @@ try {
   console.log(error);
 }
 
-// hide the navigation bar on mobile/tablet at the start
-if (screen.width <= 1024) {
-  nav.classList.toggle("hide");
-}
 
-// Toggling the navigation bar on mobile/tablet
+// Toggling the navigation bar on mobile/tablet and stop bg from scrolling
 function toggleNav() {
   nav.classList.toggle("hide");
+  console.log("toggle");
+  body.classList.toggle("disable-scroll");
 }
 
 
