@@ -10,7 +10,7 @@
 /* intro/hero */
 .intro {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../images/vegetables.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -93,7 +93,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 90vh;
+  line-height: 1.2;
 }
 
 .featured h3 {
@@ -112,7 +113,7 @@
 .item {
   background-color: #e5e3d0;
   border-radius: 10px;
-  width: 25rem;
+  width: clamp(25rem, 20vw, 30rem);
   height: 28rem;
   padding: 1rem 0;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.02);
@@ -130,7 +131,7 @@
 
 .item-img {
   width: 20rem;
-  height: clamp(25rem,50%, 30rem);
+  height: clamp(25rem,40vw, 30rem);
   background-color: white;
   border-radius: 30px;
   margin-bottom: 1rem;
@@ -138,6 +139,12 @@
 
 .item img.product {
   width: 15rem;
+}
+
+.info {
+  display: flex;
+  font-size: clamp(1rem, 1.2rem,1.5rem);
+  height: clamp(1.5rem, 1.8rem,2rem);
 }
 
 .desc {
@@ -149,23 +156,18 @@
 
 /* product name */
 .desc h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.2rem;
+  font-size: clamp(1.2rem, 1.5rem,2rem);
+  height: clamp(2rem, 2.5rem,3rem);
 }
 
 /* product info */
 .desc p {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.info {
-  display: flex;
 }
 
 .stars {
   display: flex;
-  margin-bottom: 1rem;
+  height: clamp(2rem, 2.5rem,3rem);
 }
 
 .stars img {
@@ -179,8 +181,8 @@
   height: 2.5rem;
   cursor: pointer;
   position: relative;
-  left: 16rem;
-  bottom: 4rem;
+  left: 16rem;  
+  bottom: 3rem;
   transition: 0.3s ease;
 }
 

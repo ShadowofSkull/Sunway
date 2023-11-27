@@ -11,9 +11,10 @@ const onion = document.querySelector("#onion");
 
 // hide the navigation bar on mobile/tablet at the start
 try {
-  document.addEventListener("DOMContentLoaded", (e) => {
+  document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth <= 1024) {
       nav.classList.toggle("hide");
+      console.log("refresh hide");
     }
   });
 } catch (error) {

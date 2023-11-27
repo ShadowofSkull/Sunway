@@ -9,13 +9,36 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/login.css">
     <script defer src="./js/main.js"></script>
-    <script defer src="./js/components/header.js"></script>
-    <script defer src="./js/components/footer.js"></script>
 
 </head>
 
 <body>
-    <app-header></app-header>
+    
+    <header>
+        <div class="header-wrapper">
+
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo-nobg.svg" alt="logo">
+                    <h1>Forrest</h1>
+                </a>
+            </div>
+
+            <label for="hamburger" class="hamburger" onclick="toggleNav()">
+                <img src="./images/hamburger.svg" alt="hamburger" id="hamburger">
+            </label>
+
+            <nav>
+                <a href="./index.html" onclick="toggleNav()">Home <span></span></a>
+                <a href="./shop.html" onclick="toggleNav()">Shop <span></span></a>
+                <a href="./about.html" onclick="toggleNav()">About Us <span></span></a>
+                <a href="./contact.html" onclick="toggleNav()">Contact Us <span></span></a>
+                <a href="./cart.html" onclick="toggleNav()">Cart <span></span></a>
+                <a href="./login.html" onclick="toggleNav()">Login <span></span></a>
+            </nav>
+        </div>
+    </header>
+
     <main>
         <div class="form-container">
             <h2>Login</h2>
