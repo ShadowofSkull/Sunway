@@ -3,7 +3,7 @@
 class Header extends HTMLElement{    
     connectedCallback(){
         this.innerHTML = `
-        <header>
+    <header>
         <div class="header-wrapper">
 
             <div class="logo">
@@ -18,12 +18,12 @@ class Header extends HTMLElement{
             </label>
 
             <nav>
-                <a href="./index.html" class="active">Home <span></span></a>
+                <a href="./index.html">Home <span></span></a>
                 <a href="./shop.html">Shop <span></span></a>
                 <a href="./about.html">About Us <span></span></a>
                 <a href="./contact.html">Contact Us <span></span></a>
                 <a href="./cart.html">Cart <span></span></a>
-                <a href="./login.html" id="nav-login">Login <span></span></a>
+                <a href="./login.html">Login <span></span></a>
             </nav>
         </div>
     </header>

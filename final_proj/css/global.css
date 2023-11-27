@@ -216,26 +216,26 @@ footer .col .brand img{
   transform: scale(1.2);
 }
 
-.footer-nav{
+.more{
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
 }
 
-.footer-nav h4{
+.more h4{
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.footer-nav a{
+.more a{
   font-size: 1rem;
   padding: 0.2rem;
   transition: 0.2s ease;
 }
 
-.footer-nav a:hover{
+.more a:hover{
   color: #8ABB7C;
 }
 
@@ -292,6 +292,10 @@ textarea {
   padding: 0.3rem;
   outline: none;
   font-weight: 200;
+}
+
+textarea{
+  resize: none;
 }
 
 button{
