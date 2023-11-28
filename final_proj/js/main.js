@@ -14,7 +14,6 @@ try {
   document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth <= 1024) {
       nav.classList.toggle("hide");
-      console.log("refresh hide");
     }
   });
 } catch (error) {
