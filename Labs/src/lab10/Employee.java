@@ -1,18 +1,24 @@
 package lab10;
 
-public class Employee extends Date{
+public class Employee{
     private String firstName;
     private String lastName;
     private Date birthDate;
     private Date hireDate;
-
-    public Employee(String firstName, String lastName, Date birthDate, Date hireDate){
+    //ex1
+    // public Employee(String firstName, String lastName, Date birthDate, Date hireDate){
+    //     this.firstName = firstName;
+    //     this.lastName = lastName;
+    //     this.birthDate = birthDate;
+    //     this.hireDate = hireDate;
+    // }
+    //ex2
+    public Employee(String firstName, String lastName, int birthDay, int birthMonth, int birthYear, int hireDay, int hireMonth, int hireYear){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthDate = birthDate;
-        this.hireDate = hireDate;
+        this.birthDate = new Date(birthDay, birthMonth, birthYear);
+        this.hireDate = new Date(hireDay, hireMonth, hireYear);
     }
-
     
     /** 
      * @return String
