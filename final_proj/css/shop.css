@@ -122,7 +122,7 @@ h3 {
 
 .filter {
   width: clamp(15rem, 70vw, 30rem);
-  height: clamp(37rem, 75vh, 50rem);
+  height: clamp(37rem, 70vh, 40rem);
   border-radius: 10px;
   background-color: #e5e3d0;
   margin: 1rem;
@@ -185,10 +185,10 @@ label {
 }
 
 .choice.submit {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 
-  padding: 1rem 1.8rem 3rem 1rem;
+  padding: 0 0 0 3.2rem;
 }
 
 @media (max-width: 1024px) {
@@ -213,6 +213,10 @@ label {
 
   .choice h2{
     align-self: center;
+  }
+
+  .choice.submit{
+    padding: 0;
   }
 
   .desc {
