@@ -4,6 +4,8 @@ const nav = document.querySelector("nav");
 const contactForm = document.getElementById("contact-form");
 const login = document.getElementById("login");
 const register = document.getElementById("register");
+const otp = document.getElementById("otp");
+const forgot = document.getElementById("forgot");
 const slogan = document.querySelector(".slogan");
 const carrot = document.querySelector("#carrot");
 const cauliflower = document.querySelector("#cauliflower");
@@ -64,6 +66,14 @@ const setSuccess = (element) => {
   errorDisplay.innerText = "";
   formControl.classList.add("success");
   formControl.classList.remove("error");
+};
+
+const setResetSuccess = () => {
+  const loginBut = forgot.querySelector(".login-but");
+  const successDisplay = loginBut.querySelector(".success");
+
+  successDisplay.innerText = "Password reset successful!";
+  formControl.classList.add("success");
 };
 
 // Validation for login
@@ -155,6 +165,62 @@ const validateRegister = () => {
   }
 };
 
+// 
+const validateOTP = () => {
+  const email = otp.querySelector("#email");
+  const password = otp.querySelector("#password");
+
+  const emailValue = email.value.trim();
+  const passwordValue = password.value.trim();
+
+
+  if (emailValue === "") {
+    setError(email, "Email is required");
+  } else {
+    setSuccess(email);
+  }
+
+  if (passwordValue === "") {
+    setError(password, "Password is required");
+  } else {
+    setSuccess(password);
+  }
+
+  if (emailValue === "" || passwordValue === "") {
+    return false;
+  }
+  return true;
+};
+
+// Forgot password validation
+const validatePWReset = () => {
+  
+  const password = forgot.querySelector("#password");
+  const confirmPassword = forgot.querySelector("#confirm-password");
+
+  const passwordValue = password.value.trim();
+  const confirmPasswordValue = confirmPassword.value.trim();
+
+  if (passwordValue === "") {
+    setError(password, "Password is required");
+  } else {
+    setSuccess(password);
+  }
+
+  if (confirmPasswordValue === "") {
+    setError(confirmPassword, "Password is required");
+  } else if (confirmPasswordValue !== passwordValue) {
+    setError(confirmPassword, "Password does not match");
+  } else {
+    setSuccess(confirmPassword);
+  }
+
+  if (confirmPasswordValue === "" || passwordValue === "" || confirmPasswordValue !== passwordValue) {
+    return false;
+  }
+  return true;
+};
+
 // login validation
 try {
   login.addEventListener("submit", (e) => {
@@ -183,6 +249,34 @@ try {
     e.preventDefault();
 
     validateRegister();
+  });
+} catch (error) {
+  console.log(error);
+}
+
+// OTP validation
+try {
+  otp.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (validateOTP()){
+      window.location.href = "forgot.html";
+    }
+    
+  });
+} catch (error) {
+  console.log(error);
+}
+
+// Forgot Password validation
+try {
+  forgot.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (validatePWReset()){
+     setResetSuccess(); 
+    }
+    
   });
 } catch (error) {
   console.log(error);
