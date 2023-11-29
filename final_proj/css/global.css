@@ -300,12 +300,13 @@ textarea{
 
 button{
   border-radius: 6px;
-  border: 1px solid black;
+  border: 2px solid black;
   background-color: transparent;
   width: 5rem;
   height: 3rem;
   color: black;
   transition: 0.5s ease;
+
 }
 
 button:hover{
@@ -316,18 +317,17 @@ button:hover{
 
 /* Styles for input type submit*/
 input[type="submit"] {
-  /* background-color: #c60cc6; */
+  border: none;
   background-color: #7a7a45;
   color: white;
   height: 2rem;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 0.5rem;
 }
 
 input[type="submit"]:hover {
-  /* background-color: #a018a0; */
   background-color: #9b9b54;
-  /* #a7a757 */
   color: black;
 }
 
@@ -358,6 +358,12 @@ label {
 
 .form-control .error {
   color: red;
+  font-size: 0.7rem;
+  height: 0.65rem;
+}
+
+.login-but .success{
+  color: green;
   font-size: 0.7rem;
   height: 0.65rem;
 }

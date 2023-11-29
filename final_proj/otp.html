@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <div class="header-wrapper">
 
@@ -41,46 +41,33 @@
 
     <main>
         <div class="form-container">
-            <h2>Login</h2>
-            <form action="/" method="post" id="login">
+            <h2>Forgot Password</h2>
+            <form action="" method="post" id="otp">
                 <div class="form-control">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Enter your username">
+                    <label for="username">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email">
+                    <div class="error"></div>
+                </div>
+                <div class="form-control">
+                    <label for="password">OTP</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your OTP">
                     <div class="error"></div>
 
                 </div>
-                <div class="form-control">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter your password">
-                    <div class="error"></div>
 
-                </div>
-                <div class="form-control remember">
-                    <div class="flex">
-                        <input type="checkbox" name="remember" id="remember" value="remember">
-                        <label for="remember">
-                            <p>Remember me</p>
-                        </label>
-                    </div>
-                    <p class="underline-link">
-                        <a href="./otp.html">Forgot password?</a>
-
+                <div class="form-control sign-up">
+                    <p>
+                      Get OTP from email  
                     </p>
                 </div>
-
 
                 <div class="login-but">
+                    
+                        <input type="submit" name="submit" value="Verify" id="login-but" class="button">
+                    
+                    
+                </div>
 
-                    <input type="submit" name="submit" value="Login" id="login-but" class="button">
-                </div>
-                <div class="form-control sign-up">
-                    <p class="underline-link">
-                        Do not have account?
-                        <a href="./signUp.html">
-                            Sign Up
-                        </a>
-                    </p>
-                </div>
 
             </form>
         </div>
