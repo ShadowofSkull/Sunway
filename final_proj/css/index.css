@@ -45,41 +45,36 @@
 }
 
 .intro img#carrot {
-  transform: translateX(1150px) translateY(-10px);
+  transform: translate(100vw, 0);
 }
 
 .intro img#cauliflower {
-  transform: translateX(1100px) translateY(500px);
+  transform: translate(100vw, 20vw);
 }
 
 .intro img#onion {
-  transform: translateX(300px) translateY(400px);
+  transform: translate(-40vw, 10vw);
 }
 
 /* hero text */
 .slogan {
   position: relative;
   z-index: 2;
-  width: clamp(50vw, 30rem, 50rem);
-  /* height: clamp(25rem, 70vh, 28rem); */
-
+  width: clamp(15rem, 80vw, 60rem);
+  height: clamp(3rem, 50vh, 30rem);
+  margin: 1rem 0;
   background-color: #e5e3d0;
   border-radius: 8px;
   padding: 3rem 5rem;
-  font-size: clamp(1.2rem, 3rem, 4rem);
+  font-size: clamp(2rem, 3vw,5rem);
 }
 
-.slogan a{
-  display: flex;
-  width: min(100%, 30rem);
-  padding: 3rem 0 0 23rem;
-}
-
-.slogan a button{
-  width: 9rem;
-  height: 4rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+.slogan button{
+  margin: 1rem;
+  width: max(6rem, 10vw);
+  height: max(4rem, 8vh);
+  font-size: max(1rem, 1vw);
+  font-weight: 600;
 }
 
 .intro h2 span {
@@ -99,7 +94,7 @@
 
 .featured h3 {
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .items {
@@ -251,6 +246,27 @@
 }
 
 @media(max-width: 1024px){
+  .intro{
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .slogan{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slogan a{
+    padding: 0;
+    margin: 0;
+  }
+
   .desc{
     align-items: center;
   }

@@ -11,11 +11,22 @@ const carrot = document.querySelector("#carrot");
 const cauliflower = document.querySelector("#cauliflower");
 const onion = document.querySelector("#onion");
 
-// hide the navigation bar on mobile/tablet at the start
+// when html first loaded
 try {
   document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth <= 1024) {
+      //hide the navigation bar on mobile/tablet at the start
       nav.classList.toggle("hide");
+      // remove image on mobile/tablet
+      carrot.classList.add("hide");
+      cauliflower.classList.add("hide");
+      onion.classList.add("hide");
+    }
+    else{
+
+      carrot.classList.remove("hide");
+      cauliflower.classList.remove("hide");
+      onion.classList.remove("hide");
     }
   });
 } catch (error) {
@@ -28,9 +39,9 @@ try {
   window.addEventListener("scroll", () => {
     let value = window.scrollY;
     slogan.style.marginLeft = value * -2.0 + "px";
-    carrot.style.left = value * 1.0 + "px";
-    cauliflower.style.left = value * 2.5 + "px";
-    onion.style.left = value * -1.5 + "px";
+    carrot.style.left = value * -2.5 + "px";
+    cauliflower.style.left = value * -4 + "px";
+    onion.style.left = value * 3 + "px";
   
   });
   
