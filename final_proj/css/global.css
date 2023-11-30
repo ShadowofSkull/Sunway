@@ -267,6 +267,10 @@ footer .col .version{
   font-style: italic;
 }
 
+.version p{
+  font-size: 1rem;
+}
+
 
 
 /* Form */
@@ -280,6 +284,7 @@ form {
   background-color: #e5e3d0;
   border-radius: 6px;
   margin: 5rem 1rem;
+  width: clamp(20rem, 30vw, 30rem);
 
 }
 
@@ -379,7 +384,6 @@ label {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0;
   }
 
   footer .col{

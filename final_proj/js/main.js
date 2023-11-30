@@ -22,12 +22,7 @@ try {
       cauliflower.classList.add("hide");
       onion.classList.add("hide");
     }
-    else{
 
-      carrot.classList.remove("hide");
-      cauliflower.classList.remove("hide");
-      onion.classList.remove("hide");
-    }
   });
 } catch (error) {
   console.log(error);

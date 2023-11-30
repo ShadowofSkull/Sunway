@@ -2,7 +2,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80%;
 }
 
 .form-container{
@@ -12,13 +11,7 @@ main{
     align-items: center;
     justify-content: center;
   
-    padding: 20px;
-  
-    height: 26rem;
-    width: 100%;
-    max-width: 25rem;
-    min-width: 5rem;
-  
+    padding: 20px;  
     border-radius: 6px;
 }
 
@@ -47,6 +40,7 @@ input{
 
 input[type="checkbox"]{
     width: 0.9rem;
+    margin-right: 0.2rem;
 }
 
 .remember{
