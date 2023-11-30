@@ -107,8 +107,6 @@ nav{
 nav a {
   font-size: max(1.5rem, 2vh);
   font-weight: 600;
-  /* width: clamp(15rem, 30vw, 20rem);
-  height: clamp(3rem, 8vh, 5rem); */
   margin: 1rem 2rem 0 0;
   padding: 0.2rem;
   transition: 0.3s ease;

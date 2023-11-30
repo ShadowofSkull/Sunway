@@ -122,7 +122,7 @@ h3 {
 
 .filter {
   width: clamp(15rem, 70vw, 30rem);
-  height: clamp(37rem, 70vh, 40rem);
+  height: clamp(37rem, 90vh, 40rem);
   border-radius: 10px;
   background-color: #e5e3d0;
   margin: 1rem;
