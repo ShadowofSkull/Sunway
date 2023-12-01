@@ -302,7 +302,7 @@ textarea{
   resize: none;
 }
 
-button{
+/* button{
   border-radius: 6px;
   border: 1.5px solid black;
   background-color: transparent;
@@ -317,23 +317,26 @@ button:hover{
   background-color: #7a7a45;
   color: white;
   border: none
-}
+} */
 
 /* Styles for input type submit*/
-input[type="submit"] {
+input[type="submit"], button {
   border: none;
   background-color: #7a7a45;
   color: white;
   height: 2rem;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 0.5rem;
   transition: 0.5s ease;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, button:hover {
   background-color: #9b9b54;
   color: black;
+}
+
+button{
+  border-radius: 6px;
 }
 
 label {
@@ -363,14 +366,15 @@ label {
 
 .form-control .error {
   color: red;
-  font-size: 0.7rem;
-  height: 0.65rem;
+  font-size: max(0.7rem, 0.7vw);
+  height: max(1rem ,1vw);
+
 }
 
-.login-but .success{
+.submit-but .success{
   color: green;
-  font-size: 0.7rem;
-  height: 0.65rem;
+  font-size: max(0.8rem, 0.8vw);
+  padding: 1rem 0;
 }
 
 /* Tablet and phone */

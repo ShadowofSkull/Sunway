@@ -22,12 +22,10 @@ try {
       cauliflower.classList.add("hide");
       onion.classList.add("hide");
     }
-
   });
 } catch (error) {
   console.log(error);
 }
-
 
 // Animation effect for the hero/intro section on index pg
 try {
@@ -37,13 +35,10 @@ try {
     carrot.style.left = value * -2.5 + "px";
     cauliflower.style.left = value * -4 + "px";
     onion.style.left = value * 3 + "px";
-  
   });
-  
 } catch (error) {
   console.log(error);
 }
-
 
 // Toggling the navigation bar on mobile/tablet and stop bg from scrolling
 function toggleNav() {
@@ -51,8 +46,6 @@ function toggleNav() {
   console.log("toggle");
   body.classList.toggle("disable-scroll");
 }
-
-
 
 // To display error to user on the page
 const setError = (element, message) => {
@@ -74,12 +67,11 @@ const setSuccess = (element) => {
   formControl.classList.remove("error");
 };
 
-const setResetSuccess = () => {
-  const loginBut = forgot.querySelector(".login-but");
+const setSuccessMsg = (form, msg) => {
+  const loginBut = form.querySelector(".submit-but");
   const successDisplay = loginBut.querySelector(".success");
 
-  successDisplay.innerText = "Password reset successful!";
-  formControl.classList.add("success");
+  successDisplay.innerText = msg;
 };
 
 // Validation for login
@@ -101,6 +93,11 @@ const validateLogin = () => {
   } else {
     setSuccess(password);
   }
+
+  if (usernameValue === "" || passwordValue === "") {
+    return false;
+  }
+  return true;
 };
 
 // Validation for contact form
@@ -130,6 +127,11 @@ const validateContact = () => {
   } else {
     setSuccess(message);
   }
+
+  if (nameValue === "" || emailValue === "" || messageValue === "") {
+    return false;
+  }
+  return true;
 };
 
 // Validation for registration
@@ -169,16 +171,26 @@ const validateRegister = () => {
   } else {
     setSuccess(confirmPassword);
   }
+
+  if (
+    usernameValue === "" ||
+    emailValue === "" ||
+    passwordValue === "" ||
+    confirmPasswordValue === "" ||
+    confirmPasswordValue !== passwordValue
+  ) {
+    return false;
+  }
+  return true;
 };
 
-// 
+//
 const validateOTP = () => {
   const email = otp.querySelector("#email");
   const password = otp.querySelector("#password");
 
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
-
 
   if (emailValue === "") {
     setError(email, "Email is required");
@@ -187,7 +199,7 @@ const validateOTP = () => {
   }
 
   if (passwordValue === "") {
-    setError(password, "Password is required");
+    setError(password, "OTP is required");
   } else {
     setSuccess(password);
   }
@@ -200,7 +212,6 @@ const validateOTP = () => {
 
 // Forgot password validation
 const validatePWReset = () => {
-  
   const password = forgot.querySelector("#password");
   const confirmPassword = forgot.querySelector("#confirm-password");
 
@@ -221,7 +232,11 @@ const validatePWReset = () => {
     setSuccess(confirmPassword);
   }
 
-  if (confirmPasswordValue === "" || passwordValue === "" || confirmPasswordValue !== passwordValue) {
+  if (
+    confirmPasswordValue === "" ||
+    passwordValue === "" ||
+    confirmPasswordValue !== passwordValue
+  ) {
     return false;
   }
   return true;
@@ -232,7 +247,9 @@ try {
   login.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    validateLogin();
+    if (validateLogin()){
+      setSuccessMsg(login, "Login successful!");
+    }
   });
 } catch (error) {
   console.log(error);
@@ -243,7 +260,9 @@ try {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    validateContact();
+    if (validateContact()){
+      setSuccessMsg(contactForm, "Message sent!");
+    }
   });
 } catch (error) {
   console.log(error);
@@ -254,7 +273,9 @@ try {
   register.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    validateRegister();
+    if (validateRegister()) {
+      setSuccessMsg(register, "Registration successful!");
+    }
   });
 } catch (error) {
   console.log(error);
@@ -265,10 +286,9 @@ try {
   otp.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (validateOTP()){
+    if (validateOTP()) {
       window.location.href = "forgot.html";
     }
-    
   });
 } catch (error) {
   console.log(error);
@@ -279,10 +299,9 @@ try {
   forgot.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (validatePWReset()){
-     setResetSuccess(); 
+    if (validatePWReset()) {
+      setSuccessMsg(forgot, "Password reset successfully!");
     }
-    
   });
 } catch (error) {
   console.log(error);
