@@ -12,7 +12,7 @@ main {
   justify-content: center;
 
   padding: 1rem;
-  height: clamp(20rem, 30vw,30rem);
+  height: clamp(28rem, 30vw,30rem);
   width: 100%;
   max-width: 30rem;
   min-width: 5rem;

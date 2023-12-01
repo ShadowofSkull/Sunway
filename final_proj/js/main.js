@@ -74,6 +74,13 @@ const setSuccessMsg = (form, msg) => {
   successDisplay.innerText = msg;
 };
 
+const removeMsg = (form) => {
+  const loginBut = form.querySelector(".submit-but");
+  const successDisplay = loginBut.querySelector(".success");
+
+  successDisplay.innerText = "";
+};
+
 // Validation for login
 const validateLogin = () => {
   const username = login.querySelector("#username");
@@ -250,6 +257,9 @@ try {
     if (validateLogin()){
       setSuccessMsg(login, "Login successful!");
     }
+    else{
+      removeMsg(register);
+    }
   });
 } catch (error) {
   console.log(error);
@@ -263,6 +273,9 @@ try {
     if (validateContact()){
       setSuccessMsg(contactForm, "Message sent!");
     }
+    else{
+      removeMsg(register);
+    }
   });
 } catch (error) {
   console.log(error);
@@ -275,6 +288,9 @@ try {
 
     if (validateRegister()) {
       setSuccessMsg(register, "Registration successful!");
+    }
+    else{
+      removeMsg(register);
     }
   });
 } catch (error) {
@@ -301,6 +317,9 @@ try {
 
     if (validatePWReset()) {
       setSuccessMsg(forgot, "Password reset successfully!");
+    }
+    else{
+      removeMsg(register);
     }
   });
 } catch (error) {
