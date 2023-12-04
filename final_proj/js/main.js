@@ -97,11 +97,16 @@ const validateLogin = () => {
 
   if (passwordValue === "") {
     setError(password, "Password is required");
-  } else {
+  } 
+  else if (passwordValue.length < 8 || passwordValue.length > 16){
+    console.log(password.length);
+    setError(password, "Password length can only be between 8 to 16");
+  }
+  else {
     setSuccess(password);
   }
 
-  if (usernameValue === "" || passwordValue === "") {
+  if (usernameValue === "" || passwordValue === "" || passwordValue.length < 8 || passwordValue.length > 16) {
     return false;
   }
   return true;
@@ -152,6 +157,8 @@ const validateRegister = () => {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const confirmPasswordValue = confirmPassword.value.trim();
+  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+
 
   if (usernameValue === "") {
     setError(username, "Username is required");
@@ -161,13 +168,22 @@ const validateRegister = () => {
 
   if (emailValue === "") {
     setError(email, "Email is required");
-  } else {
+  }
+  else if (!regx.test(emailValue)){
+    setError(email, "Invalid Email")
+  } 
+  else {
     setSuccess(email);
   }
 
   if (passwordValue === "") {
     setError(password, "Password is required");
-  } else {
+  }
+  else if (passwordValue.length < 8 || passwordValue.length > 16){
+    console.log(password.length);
+    setError(password, "Password length can only be between 8 to 16");
+  }
+  else {
     setSuccess(password);
   }
 
@@ -184,7 +200,7 @@ const validateRegister = () => {
     emailValue === "" ||
     passwordValue === "" ||
     confirmPasswordValue === "" ||
-    confirmPasswordValue !== passwordValue
+    confirmPasswordValue !== passwordValue || passwordValue.length < 8 || passwordValue.length > 16
   ) {
     return false;
   }
@@ -198,16 +214,22 @@ const validateOTP = () => {
 
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
+  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
 
   if (emailValue === "") {
     setError(email, "Email is required");
-  } else {
+  } 
+  else if (!regx.test(emailValue)){
+    setError(email, "Invalid Email")
+  } 
+  else {
     setSuccess(email);
   }
 
   if (passwordValue === "") {
     setError(password, "OTP is required");
-  } else {
+  } 
+  else {
     setSuccess(password);
   }
 
@@ -227,7 +249,12 @@ const validatePWReset = () => {
 
   if (passwordValue === "") {
     setError(password, "Password is required");
-  } else {
+  } 
+  else if (passwordValue.length < 8 || passwordValue.length > 16){
+    console.log(password.length);
+    setError(password, "Password length can only be between 8 to 16");
+  }
+  else {
     setSuccess(password);
   }
 
@@ -242,7 +269,7 @@ const validatePWReset = () => {
   if (
     confirmPasswordValue === "" ||
     passwordValue === "" ||
-    confirmPasswordValue !== passwordValue
+    confirmPasswordValue !== passwordValue || passwordValue.length < 8 || passwordValue.length > 16
   ) {
     return false;
   }
