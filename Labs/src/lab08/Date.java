@@ -104,7 +104,6 @@ public class Date {
     public int convertToDayOfYear(){
         int ddd = day;
         for (int i = 1; i < this.month; i++) {
-            System.out.println(ddd);
             ddd += daysInMonth(i);
         }
         return ddd;

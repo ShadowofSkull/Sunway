@@ -28,3 +28,4 @@ https://world.pokemongaole.com/ma/howtoplay/chances_battle.html
 2. new “Double Rush” and “Rush Combo” feature:
 https://world.pokemongaole.com/ma/information/article/21757
 3. adding the ability to save the Pokémon as your add-on feature.
+
