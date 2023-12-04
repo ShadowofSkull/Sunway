@@ -152,6 +152,8 @@ const validateRegister = () => {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const confirmPasswordValue = confirmPassword.value.trim();
+  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+
 
   if (usernameValue === "") {
     setError(username, "Username is required");
@@ -161,7 +163,11 @@ const validateRegister = () => {
 
   if (emailValue === "") {
     setError(email, "Email is required");
-  } else {
+  }
+  else if (!regx.test(emailValue)){
+    setError(email, "Invalid Email")
+  } 
+  else {
     setSuccess(email);
   }
 
@@ -198,10 +204,15 @@ const validateOTP = () => {
 
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
-
+  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+  
   if (emailValue === "") {
     setError(email, "Email is required");
-  } else {
+  } 
+  else if (!regx.test(emailValue)){
+    setError(email, "Invalid Email")
+  } 
+  else {
     setSuccess(email);
   }
 
