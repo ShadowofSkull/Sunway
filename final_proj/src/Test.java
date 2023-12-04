@@ -1,22 +1,35 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Test {
+    
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int num = 0
-        for (int i = 0; i < 10; i++) {
-            // System.out.print("Mash with Enter: ");
-            String space = scanner.nextLine();
-            
-            if (space.equals(""))
-                // System.out.println("y");
-            else
-                // System.out.println("n");
-        }
-        
 
-        scanner.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        try {
+      File myObj = new File("final_proj/pickachu.txt");
+      Scanner myReader = new Scanner(myObj);
+      while (myReader.hasNextLine()) {
+        String data = myReader.nextLine();
+        System.out.println(data);
+      }
+      myReader.close();
+    } catch (FileNotFoundException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
     }
 }
-
