@@ -138,6 +138,7 @@ const validateContact = () => {
   const nameValue = name.value.trim();
   const emailValue = email.value.trim();
   const messageValue = message.value.trim();
+  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
 
   if (nameValue === "") {
     setError(name, "Username is required");
@@ -147,6 +148,8 @@ const validateContact = () => {
 
   if (emailValue === "") {
     setError(email, "Email is required");
+  } else if (!regx.test(emailValue)) {
+    setError(email, "Invalid Email");
   } else {
     setSuccess(email);
   }
@@ -155,13 +158,13 @@ const validateContact = () => {
     setError(message, "Message is required");
   } 
   else if (messageValue.length < 10) {
-    setError(message, "Message must be at least 10 characters");
+    setError(message, "Message must be at least 10 characters long");
   }
   else {
     setSuccess(message);
   }
 
-  if (nameValue === "" || emailValue === "" || messageValue === "" || messageValue.length < 10) {
+  if (nameValue === "" || emailValue === "" || messageValue === "" || messageValue.length < 10 || !regx.test(emailValue)) {
     return false;
   }
   return true;
