@@ -81,6 +81,18 @@ const removeMsg = (form) => {
   successDisplay.innerText = "";
 };
 
+// Fake database for login
+const users = [
+  {
+    username: "admin",
+    password: "admin",
+  },
+  {
+    username: "user",
+    password: "user",
+  },
+];
+
 // Validation for login
 const validateLogin = () => {
   const username = login.querySelector("#username");
@@ -88,20 +100,30 @@ const validateLogin = () => {
 
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
+  // check if user exists in the fake database
+  const userExists = users.find(user => user.username === usernameValue && user.password === passwordValue);
 
   if (usernameValue === "") {
     setError(username, "Username is required");
-  } else {
+  } 
+  else if(userExists === undefined){
+    setError(username, "Invalid username or password");
+  }
+  else {
     setSuccess(username);
   }
 
   if (passwordValue === "") {
     setError(password, "Password is required");
-  } else {
+  } 
+  else if (userExists === undefined) {
+    setError(password, "Invalid username or password");
+  }
+  else {
     setSuccess(password);
   }
 
-  if (usernameValue === "" || passwordValue === "") {
+  if (usernameValue === "" || passwordValue === "" || userExists === undefined) {
     return false;
   }
   return true;
@@ -196,7 +218,7 @@ const validateRegister = () => {
     confirmPasswordValue === "" ||
     confirmPasswordValue !== passwordValue ||
     passwordValue.length < 8 ||
-    passwordValue.length > 16
+    passwordValue.length > 16 || !regx.test(emailValue)
   ) {
     return false;
   }
@@ -277,7 +299,7 @@ try {
     if (validateLogin()) {
       setSuccessMsg(login, "Login successful!");
     } else {
-      removeMsg(register);
+      removeMsg(login);
     }
   });
 } catch (error) {
@@ -292,7 +314,7 @@ try {
     if (validateContact()) {
       setSuccessMsg(contactForm, "Message sent!");
     } else {
-      removeMsg(register);
+      removeMsg(contactForm);
     }
   });
 } catch (error) {
@@ -305,7 +327,7 @@ try {
     e.preventDefault();
 
     if (validateRegister()) {
-      setSuccessMsg(register, "Registration successful!");
+      setSuccessMsg(register, "Registration successful and logged in!");
     } else {
       removeMsg(register);
     }
@@ -335,7 +357,7 @@ try {
     if (validatePWReset()) {
       setSuccessMsg(forgot, "Password reset successfully!");
     } else {
-      removeMsg(register);
+      removeMsg(forgot);
     }
   });
 } catch (error) {
