@@ -131,11 +131,15 @@ const validateContact = () => {
 
   if (messageValue === "") {
     setError(message, "Message is required");
-  } else {
+  } 
+  else if (messageValue.length < 10) {
+    setError(message, "Message must be at least 10 characters");
+  }
+  else {
     setSuccess(message);
   }
 
-  if (nameValue === "" || emailValue === "" || messageValue === "") {
+  if (nameValue === "" || emailValue === "" || messageValue === "" || messageValue.length < 10) {
     return false;
   }
   return true;
