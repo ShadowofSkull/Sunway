@@ -66,10 +66,10 @@
   background-color: #e5e3d0;
   border-radius: 8px;
   padding: 3rem 5rem;
-  font-size: clamp(2rem, 3vw,5rem);
+  font-size: clamp(2rem, 3vw, 5rem);
 }
 
-.slogan button{
+.slogan button {
   margin: 1rem;
   width: max(6rem, 10vw);
   height: max(4rem, 8vh);
@@ -128,7 +128,7 @@
 
 .item-img {
   width: clamp(13rem, 35vw, 20rem);
-  height: clamp(20rem,40vw, 30rem);
+  height: clamp(20rem, 40vw, 30rem);
   background-color: white;
   border-radius: 30px;
   margin: 1rem;
@@ -139,13 +139,12 @@
 
 .item img.product {
   width: 15rem;
-  
 }
 
 .info {
   display: flex;
-  font-size: clamp(1rem, 1.2rem,1.5rem);
-  height: clamp(1.5rem, 1.8rem,2rem);
+  font-size: clamp(1rem, 1.2rem, 1.5rem);
+  height: clamp(1.5rem, 1.8rem, 2rem);
 }
 
 .desc {
@@ -157,8 +156,8 @@
 
 /* product name */
 .desc h4 {
-  font-size: clamp(1.2rem, 1.5rem,2rem);
-  height: clamp(2rem, 2.5rem,3rem);
+  font-size: clamp(1.2rem, 1.5rem, 2rem);
+  height: clamp(2rem, 2.5rem, 3rem);
 }
 
 /* product info */
@@ -168,7 +167,7 @@
 
 .stars {
   display: flex;
-  height: clamp(2rem, 2.5rem,3rem);
+  height: clamp(2rem, 2.5rem, 3rem);
 }
 
 .stars img {
@@ -182,7 +181,7 @@
   height: 2.5rem;
   cursor: pointer;
   position: relative;
-  left: 16rem;  
+  left: 16rem;
   bottom: 3rem;
 
   transition: 0.3s ease;
@@ -248,14 +247,13 @@
   width: 40%;
 }
 
-@media(max-width: 1024px){
-  .intro{
+@media (max-width: 1024px) {
+  .intro {
     padding: 0;
     margin: 0;
-
   }
 
-  .slogan{
+  .slogan {
     padding: 0;
     margin: 0;
     text-align: center;
@@ -265,18 +263,17 @@
     align-items: center;
   }
 
-  .slogan a{
+  .slogan a {
     padding: 0;
     margin: 0;
   }
 
-  .desc{
+  .desc {
     align-items: center;
   }
 
   /* Remove positioning for desktop */
-  .item img.add-cart{
+  .item img.add-cart {
     position: static;
-
   }
 }

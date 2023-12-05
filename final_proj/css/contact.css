@@ -12,12 +12,10 @@ main {
   justify-content: center;
 
   padding: 1rem;
-  height: clamp(28rem, 30vw,30rem);
+  height: clamp(28rem, 30vw, 30rem);
   width: 100%;
   max-width: 30rem;
   min-width: 5rem;
-
-  
 }
 
 input,
@@ -34,15 +32,11 @@ label {
   line-height: 1.9rem;
 }
 
-.form-control.msg{
+.form-control.msg {
   height: 8rem;
 }
 
-.form-control.msg .error{
+.form-control.msg .error {
   position: relative;
   top: -1.5rem;
-}
-
-.success{
-  /* padding: 1rem 0; */
 }

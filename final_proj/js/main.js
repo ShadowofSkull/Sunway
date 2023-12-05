@@ -17,7 +17,7 @@ try {
     if (window.innerWidth <= 1024) {
       //hide the navigation bar on mobile/tablet at the start
       nav.classList.toggle("hide");
-      // remove image on mobile/tablet
+      // remove animation image on mobile/tablet
       carrot.classList.add("hide");
       cauliflower.classList.add("hide");
       onion.classList.add("hide");
@@ -97,16 +97,11 @@ const validateLogin = () => {
 
   if (passwordValue === "") {
     setError(password, "Password is required");
-  } 
-  else if (passwordValue.length < 8 || passwordValue.length > 16){
-    console.log(password.length);
-    setError(password, "Password length can only be between 8 to 16");
-  }
-  else {
+  } else {
     setSuccess(password);
   }
 
-  if (usernameValue === "" || passwordValue === "" || passwordValue.length < 8 || passwordValue.length > 16) {
+  if (usernameValue === "" || passwordValue === "") {
     return false;
   }
   return true;
@@ -159,7 +154,6 @@ const validateRegister = () => {
   const confirmPasswordValue = confirmPassword.value.trim();
   const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
 
-
   if (usernameValue === "") {
     setError(username, "Username is required");
   } else {
@@ -168,22 +162,18 @@ const validateRegister = () => {
 
   if (emailValue === "") {
     setError(email, "Email is required");
-  }
-  else if (!regx.test(emailValue)){
-    setError(email, "Invalid Email")
-  } 
-  else {
+  } else if (!regx.test(emailValue)) {
+    setError(email, "Invalid Email");
+  } else {
     setSuccess(email);
   }
 
   if (passwordValue === "") {
     setError(password, "Password is required");
-  }
-  else if (passwordValue.length < 8 || passwordValue.length > 16){
+  } else if (passwordValue.length < 8 || passwordValue.length > 16) {
     console.log(password.length);
     setError(password, "Password length can only be between 8 to 16");
-  }
-  else {
+  } else {
     setSuccess(password);
   }
 
@@ -200,7 +190,9 @@ const validateRegister = () => {
     emailValue === "" ||
     passwordValue === "" ||
     confirmPasswordValue === "" ||
-    confirmPasswordValue !== passwordValue || passwordValue.length < 8 || passwordValue.length > 16
+    confirmPasswordValue !== passwordValue ||
+    passwordValue.length < 8 ||
+    passwordValue.length > 16
   ) {
     return false;
   }
@@ -218,18 +210,15 @@ const validateOTP = () => {
 
   if (emailValue === "") {
     setError(email, "Email is required");
-  } 
-  else if (!regx.test(emailValue)){
-    setError(email, "Invalid Email")
-  } 
-  else {
+  } else if (!regx.test(emailValue)) {
+    setError(email, "Invalid Email");
+  } else {
     setSuccess(email);
   }
 
   if (passwordValue === "") {
     setError(password, "OTP is required");
-  } 
-  else {
+  } else {
     setSuccess(password);
   }
 
@@ -249,12 +238,10 @@ const validatePWReset = () => {
 
   if (passwordValue === "") {
     setError(password, "Password is required");
-  } 
-  else if (passwordValue.length < 8 || passwordValue.length > 16){
+  } else if (passwordValue.length < 8 || passwordValue.length > 16) {
     console.log(password.length);
     setError(password, "Password length can only be between 8 to 16");
-  }
-  else {
+  } else {
     setSuccess(password);
   }
 
@@ -269,7 +256,9 @@ const validatePWReset = () => {
   if (
     confirmPasswordValue === "" ||
     passwordValue === "" ||
-    confirmPasswordValue !== passwordValue || passwordValue.length < 8 || passwordValue.length > 16
+    confirmPasswordValue !== passwordValue ||
+    passwordValue.length < 8 ||
+    passwordValue.length > 16
   ) {
     return false;
   }
@@ -281,10 +270,9 @@ try {
   login.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (validateLogin()){
+    if (validateLogin()) {
       setSuccessMsg(login, "Login successful!");
-    }
-    else{
+    } else {
       removeMsg(register);
     }
   });
@@ -297,10 +285,9 @@ try {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (validateContact()){
+    if (validateContact()) {
       setSuccessMsg(contactForm, "Message sent!");
-    }
-    else{
+    } else {
       removeMsg(register);
     }
   });
@@ -315,8 +302,7 @@ try {
 
     if (validateRegister()) {
       setSuccessMsg(register, "Registration successful!");
-    }
-    else{
+    } else {
       removeMsg(register);
     }
   });
@@ -344,8 +330,7 @@ try {
 
     if (validatePWReset()) {
       setSuccessMsg(forgot, "Password reset successfully!");
-    }
-    else{
+    } else {
       removeMsg(register);
     }
   });

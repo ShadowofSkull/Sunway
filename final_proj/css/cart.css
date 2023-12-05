@@ -70,7 +70,6 @@ h2 {
 
 .pricing {
   font-size: max(0.8rem, 1vw);
-    
 }
 
 .price {
@@ -85,12 +84,11 @@ h2 {
   margin-bottom: 2rem;
 }
 
-
-.charge h4{
+.charge h4 {
   font-size: max(1rem, 1.2vw);
 }
 
-.charge p{
+.charge p {
   font-size: max(0.8rem, 1vw);
 }
 
@@ -102,7 +100,6 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-
 
 .checkout button {
   border: none;
@@ -119,25 +116,29 @@ h2 {
   color: black;
 }
 
-@media (max-width: 1024px){
-    .items, .product, .price, .charge{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+@media (max-width: 1024px) {
+  .items,
+  .product,
+  .price,
+  .charge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .item, .quantity, .price{
-        padding: 0;
-    }
+  .item,
+  .quantity,
+  .price {
+    padding: 0;
+  }
 
-    .item{
-        justify-content: space-around;
-    }
+  .item {
+    justify-content: space-around;
+  }
 
-    .item, .price{
-        padding: 0.4rem;
-
-    }
-
+  .item,
+  .price {
+    padding: 0.4rem;
+  }
 }

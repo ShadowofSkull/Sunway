@@ -9,24 +9,14 @@
 }
 
 html {
-  overflow-x: hidden;
   overflow-y: scroll;
 }
 
 body {
-  width: 100%;
   background-color: #8abb7c;
   /* so footer stays at bottom with margin-top auto*/
-  display: flex;  
+  display: flex;
   flex-direction: column;
-  min-height: 100vh;
-
-}
-
-/* Main */
-main {
-  width: 100%;
-  
 }
 
 img {
@@ -42,11 +32,11 @@ a {
 
 /* Header */
 header {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 8rem;
+  width: 100%;
 }
 
 .header-wrapper {
@@ -55,7 +45,7 @@ header {
   left: 0;
   width: 100%;
   max-width: 100vw;
-  height:8rem;
+  height: 8rem;
   padding: 1.3rem 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -84,7 +74,7 @@ header {
   margin-right: 1rem;
 }
 
-.logo img{
+.logo img {
   width: clamp(2rem, 15vw, 6rem);
 }
 
@@ -95,9 +85,8 @@ header {
   height: 100%;
 }
 
-
 /* Navbar */
-nav{
+nav {
   display: flex;
   width: clamp(50vw, 60rem, 70vw);
 
@@ -128,11 +117,10 @@ nav a span {
   transition: 0.5s;
 }
 
-nav a:hover span{
+nav a:hover span {
   transform: scale(1);
   opacity: 1;
 }
-
 
 /* To hide navbar */
 .hide {
@@ -147,11 +135,8 @@ nav a:hover span{
 }
 
 img#hamburger {
-  width: min(15vw,4rem);
+  width: min(15vw, 4rem);
 }
-
-
-
 
 /* Footer */
 footer {
@@ -160,118 +145,117 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   padding: 2rem;
   margin-top: auto;
 }
 
-footer .col{
+footer .col {
   display: flex;
   flex-direction: column;
   padding: 0 5rem;
 }
 
-footer .col .brand{
+footer .col .brand {
   font-size: max(2rem, 2vw);
-  font-weight: 700;  
+  font-weight: 700;
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-footer .col .brand img{
+footer .col .brand img {
   width: max(2.2rem, 2.5vw);
 }
 
-.contact{
+.contact {
   margin-bottom: 0.2rem;
 }
 
-.contact h4{
+.contact h4 {
   font-size: max(1.2rem, 1.2vw);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-.contact p{
+.contact p {
   font-size: 1rem;
   font-size: max(1rem, 0.9vw);
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
-.follow h5{
+.follow h5 {
   font-size: max(1rem, 1vw);
   font-weight: 600;
   margin-bottom: 0.1rem;
 }
 
-.social a img{
+.social a img {
   width: 1.2rem;
   height: 1.2rem;
   margin: 0.5rem;
 }
 
-.social a img:hover{
+.social a img:hover {
   transform: scale(1.2);
 }
 
-.more{
+.more {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
 }
 
-.more h4{
+.more h4 {
   font-size: max(1.2rem, 1.2vw);
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.more a{
+.more a {
   font-size: max(1rem, 1vw);
   padding: 0.2rem;
   transition: 0.2s ease;
 }
 
-.more a:hover{
-  color: #8ABB7C;
+.more a:hover {
+  color: #8abb7c;
 }
 
-.social{
+.social {
   display: flex;
 }
 
-.payment{
+.payment {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.payment h4{
+.payment h4 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-.payment .gateway{
+.payment .gateway {
   display: flex;
   align-items: center;
   padding-bottom: 1rem;
 }
-.payment .gateway img{
+.payment .gateway img {
   width: 2.5rem;
   height: 2.5rem;
   margin: 0.5rem;
 }
 
-footer .col .version{
+footer .col .version {
   font-style: italic;
 }
 
-.version p{
-  font-size: 1rem;
+.version p {
+  font-size: 0.8rem;
 }
-
-
 
 /* Form */
 form {
@@ -285,7 +269,6 @@ form {
   border-radius: 6px;
   margin: 5rem 1rem;
   width: clamp(20rem, 30vw, 30rem);
-
 }
 
 input,
@@ -298,29 +281,13 @@ textarea {
   font-weight: 200;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
-/* button{
-  border-radius: 6px;
-  border: 1.5px solid black;
-  background-color: transparent;
-  width: 5rem;
-  height: 3rem;
-  color: black;
-  transition: 0.5s ease;
-
-}
-
-button:hover{
-  background-color: #7a7a45;
-  color: white;
-  border: none
-} */
-
 /* Styles for input type submit*/
-input[type="submit"], button {
+input[type="submit"],
+button {
   border: none;
   background-color: #7a7a45;
   color: white;
@@ -330,12 +297,13 @@ input[type="submit"], button {
   transition: 0.5s ease;
 }
 
-input[type="submit"]:hover, button:hover {
+input[type="submit"]:hover,
+button:hover {
   background-color: #9b9b54;
   color: black;
 }
 
-button{
+button {
   border-radius: 6px;
 }
 
@@ -367,11 +335,10 @@ label {
 .form-control .error {
   color: red;
   font-size: max(0.7rem, 0.7vw);
-  height: max(1rem ,1vw);
-
+  height: max(1rem, 1vw);
 }
 
-.submit-but .success{
+.submit-but .success {
   color: green;
   font-size: max(0.8rem, 0.8vw);
   padding: 1rem 0;
@@ -379,30 +346,26 @@ label {
 
 /* Tablet and phone */
 @media (max-width: 1024px) {
-  *{
+  * {
     text-align: center;
   }
 
-  footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  footer {
     padding: 0;
   }
 
-  footer .col{
-    padding: 1rem 0;
+  footer .col {
+    padding: 1rem;
     justify-content: center;
     align-items: center;
   }
 
-  footer .col .payment{
+  footer .col .payment {
     align-items: center;
     justify-content: center;
   }
 
-  footer .col .more{
+  footer .col .more {
     justify-content: center;
     align-items: center;
   }
@@ -415,7 +378,7 @@ label {
     padding: 2%;
   }
 
-  .disable-scroll{
+  .disable-scroll {
     position: fixed;
   }
 
@@ -436,13 +399,13 @@ label {
   nav a {
     margin: 0;
     padding: 2rem;
-    
+
     width: 100vw;
     height: 3rem;
     border-bottom: 1px solid #777676;
   }
 
-  nav a span{
+  nav a span {
     border-radius: 0px;
   }
 }

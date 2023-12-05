@@ -8,7 +8,6 @@ h3 {
   font-size: 2rem;
   margin: 3rem;
   align-self: center;
-
 }
 
 /*  products */
@@ -121,8 +120,6 @@ h3 {
   width: 100vw;
 }
 
-
-
 .filter {
   width: clamp(15rem, 70vw, 30rem);
   height: clamp(37rem, 90vh, 40rem);
@@ -130,7 +127,6 @@ h3 {
   background-color: #e5e3d0;
   margin: 1rem;
 }
-
 
 .choice {
   display: flex;
@@ -178,7 +174,6 @@ label {
 }
 .range span {
   font-size: 2rem;
-
 }
 
 #filter-but {
@@ -195,30 +190,30 @@ label {
 }
 
 @media (max-width: 1024px) {
-  .shop{
+  .shop {
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
   }
 
-  .range{
+  .range {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .choice{
+  .choice {
     padding: 1rem;
     align-items: center;
     justify-content: center;
   }
 
-  .choice h2{
+  .choice h2 {
     align-self: center;
   }
 
-  .choice.submit{
+  .choice.submit {
     padding: 0;
   }
 
