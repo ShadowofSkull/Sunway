@@ -1,10 +1,14 @@
-import game_mechanics.Mash;
+package game_mechanics;
 
-public class Test {
-    public static void main(String[] args) throws InterruptedException {
-        Mash mash = new Mash();
-        mash.setPhase("attackRoulette");
-        String[] attackAnimationSlides = { "                                                       \r\n" + //
+public class AttackRoulette extends Roulette {
+
+
+    public AttackRoulette(Mash mash) {
+        super(mash);
+    }
+
+    public void displayAttackAnimation() throws InterruptedException {
+        String[] attackAnimationSlides = {"                                                       \r\n" + //
                 "               -------------------------               \r\n" + //
                 "             -/  +-------------------+  \\-             \r\n" + //
                 "           -/    | ----- |   |-----  |    \\-           \r\n" + //
@@ -58,8 +62,7 @@ public class Test {
                         "          \\-                               -/          \r\n" + //
                         "            \\-                           -/            \r\n" + //
                         "              \\-                       -/              \r\n" + //
-                        "               -------------------------               ",
-                "                                                       \r\n" + //
+                        "               -------------------------               ", "                                                       \r\n" + //
                         "               -------------------------               \r\n" + //
                         "             -/                         \\-             \r\n" + //
                         "           -/      ----- |   |-----       \\-           \r\n" + //
@@ -85,32 +88,9 @@ public class Test {
                         "          \\-                               -/          \r\n" + //
                         "            \\-                           -/            \r\n" + //
                         "              \\-                       -/              \r\n" + //
-                        "               -------------------------               " };
-        while (mash.getPhase().equals("attackRoulette")) {
-            if (!mash.getPhase().equals("stopAttackRoulette")) {
-                System.out.println(attackAnimationSlides[0]);
-                Thread.sleep(500);
-            }
-            else{
-                break;
-            }
-            if (!mash.getPhase().equals("stopAttackRoulette")) {
-                System.out.println(attackAnimationSlides[1]);
-                Thread.sleep(500);
+                        "               -------------------------               "};
 
-            }
-            else{
-                break;
-            }
-            if (!mash.getPhase().equals("stopAttackRoulette")) {
-                System.out.println(attackAnimationSlides[2]);
-                Thread.sleep(500);
- 
-            }
-            else{
-                break;
-            }
-        }
-
+        displayAnimation(attackAnimationSlides); 
+        
     }
 }
