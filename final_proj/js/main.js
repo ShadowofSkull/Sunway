@@ -228,7 +228,7 @@ const validateRegister = () => {
   return true;
 };
 
-//
+// Validation for OTP
 const validateOTP = () => {
   const email = otp.querySelector("#email");
   const password = otp.querySelector("#password");

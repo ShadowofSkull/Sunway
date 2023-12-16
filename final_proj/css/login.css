@@ -56,3 +56,15 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
 }
+
+.form-control .send {
+  display: flex;
+}
+
+.form-control .send button {
+  width: 4.5rem;
+  height: 1.5rem;
+  margin: 0 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
