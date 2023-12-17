@@ -4,9 +4,10 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 
+import Pokemon.Ally;
 
 public class Mash extends JFrame implements KeyListener {
-    
+
     private String phase = "";
 
     public Mash() {
@@ -39,17 +40,34 @@ public class Mash extends JFrame implements KeyListener {
 
         if (spacePressed && phase.equals("stopPokeballRoulette")) {
             System.out.println(PokeballRoulette.getBallSelected());
-            
-        } 
+
+        }
         if (spacePressed && phase.equals("battle")) {
             System.out.println("battle");
-        } 
+        }
         if (spacePressed && phase.equals("spirit")) {
             Spirit.increaseSpirit();
             System.out.println(Spirit.getSpirit());
         }
         if (spacePressed && phase.equals("attackRoulette")) {
             setPhase("stopAttackRoulette");
+        }
+        if (phase.equals("choosePokemon")) {
+            Pokemons[] pokemons = Ally.displayPokemons();
+
+            if (keyCode == KeyEvent.VK_1) {
+                System.out.println("1");
+                Ally.choosePokemon(pokemons[0]);
+            }
+            if (keyCode == KeyEvent.VK_2) {
+                System.out.println("2");
+                Ally.choosePokemon(pokemons[1]);
+            }
+            if (keyCode == KeyEvent.VK_3) {
+                System.out.println("3");
+                Ally.choosePokemon(pokemons[2]);
+            }
+
         }
 
     }

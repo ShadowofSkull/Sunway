@@ -29,3 +29,17 @@ https://world.pokemongaole.com/ma/howtoplay/chances_battle.html
 https://world.pokemongaole.com/ma/information/article/21757
 3. adding the ability to save the Pokémon as your add-on feature.
 
+## Design
+### Flow 
+1. 3 random pokemon appear (using RandomPokemon in Game)
+2. player pick one (or two since we aren't saving players own pokemon in file only the current game pokemons are saved) (Ally stores the pokemons)
+3. two wild pokemon details displayed (stored in Enemy)
+4. ally pokemons displayed 
+5. battle phase start attack in turns
+   1. attack&defense is invoked in turn for player
+   2. after every attack catch method check if enemy can be catch (both enemy need to be 0 hp to catch) (implement logic in Game)
+6. win get to catch pokemon/ lose goes to part `9`
+7. choose pokeball from roulette
+8. display pokemon caught or not
+9.  Player enter name for highscore
+10. display top 5 highscores 

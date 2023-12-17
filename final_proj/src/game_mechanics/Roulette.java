@@ -9,10 +9,10 @@ public class Roulette {
 
     public void displayAnimation(String[] animationSlides) throws InterruptedException { // displays animation
         for (String slide : animationSlides) {
-            clearConsole();
             if (mash.getPhase().equals("stopAttackRoulette")) {
                 break;
             }
+            clearConsole();
             System.out.println(slide);
             Thread.sleep(500);
         }
