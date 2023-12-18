@@ -1,6 +1,7 @@
 import PokemonPack.Ally;
 import PokemonPack.Enemy;
 import PokemonPack.Pokemon;
+import game_mechanics.Attack;
 import game_mechanics.AttackRoulette;
 import game_mechanics.Mash;
 import game_mechanics.PokeballRoulette;
@@ -31,15 +32,18 @@ public class Game {
         // Attack phase
         // Attack roulette require mash to be passed in to determine when to stop the
         // roulette display
-        AttackRoulette attackRoulette = new AttackRoulette(mash);
+        // AttackRoulette attackRoulette = new AttackRoulette(mash);
         mash.setPhase("attackRoulette");
-        while (mash.getPhase().equals("attackRoulette")) {
+        // while (mash.getPhase().equals("attackRoulette")) {
 
-            attackRoulette.displayAttackAnimation();
-        }
-        // Spirit phase
-        mash.setPhase("spirit");
-
+        //     attackRoulette.displayAttackAnimation();
+        // }
+        // // Spirit phase
+        // mash.setPhase("spirit");
+        // Thread.sleep(2000);
+        // mash.setPhase("");
+        Attack attack = new Attack(new AttackRoulette(mash), mash);
+        attack.attack();
         // Defense phase
 
         // Catch phase

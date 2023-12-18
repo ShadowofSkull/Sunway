@@ -68,23 +68,13 @@ public class Mash extends JFrame implements KeyListener {
         }
 
         if (spacePressed && phase.equals("attackRoulette")) {
-            setPhase("stopAttackRoulette");
+            setPhase("stopRoulette");
         }
 
-        if (phase.equals("spirit")) {
-            Timer timer = new Timer(2000);
-            try {
-                timer.startTimer();
-            } catch (InterruptedException e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
-            if (spacePressed && (!timer.isTimesUp())) {
-                Spirit.increaseSpirit();
-                System.out.println(Spirit.getSpirit());
-            }
-            if (timer.isTimesUp())
-                System.out.println("Times up");
+        if (spacePressed && phase.equals("spirit")) {
+            System.out.println("Spirit increased");
+            Spirit.increaseSpirit();
+            System.out.println(Spirit.getSpirit());
         }
         if (spacePressed && phase.equals("stopPokeballRoulette")) {
             System.out.println(PokeballRoulette.getBallSelected());
