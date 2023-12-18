@@ -4,11 +4,13 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 
-import Pokemon.Ally;
+import PokemonPack.Ally;
+import PokemonPack.Pokemon;
 
 public class Mash extends JFrame implements KeyListener {
 
     private String phase = "";
+    private Pokemon[] pokemons;
 
     public Mash() {
         this.setVisible(true);
@@ -21,6 +23,10 @@ public class Mash extends JFrame implements KeyListener {
 
     public void setPhase(String phase) {
         this.phase = phase;
+    }
+
+    public void setPokemons(Pokemon[] pokemons) {
+        this.pokemons = pokemons;
     }
 
     @Override
@@ -38,36 +44,50 @@ public class Mash extends JFrame implements KeyListener {
         int keyCode = e.getKeyCode();
         boolean spacePressed = (keyCode == KeyEvent.VK_SPACE);
 
-        if (spacePressed && phase.equals("stopPokeballRoulette")) {
-            System.out.println(PokeballRoulette.getBallSelected());
+        if (phase.equals("choosePokemon")) {
+
+            if (keyCode == KeyEvent.VK_1) {
+                System.out.println("Picked 1, Game loading please wait");
+                Ally.choosePokemon(pokemons[0]);
+                setPhase("battle");
+            }
+            if (keyCode == KeyEvent.VK_2) {
+                System.out.println("Picked 2, Game loading please wait");
+                Ally.choosePokemon(pokemons[1]);
+                setPhase("battle");
+            }
+            if (keyCode == KeyEvent.VK_3) {
+                System.out.println("Picked 3, Game loading please wait");
+                Ally.choosePokemon(pokemons[2]);
+                setPhase("battle");
+            }
 
         }
         if (spacePressed && phase.equals("battle")) {
             System.out.println("battle");
         }
-        if (spacePressed && phase.equals("spirit")) {
-            Spirit.increaseSpirit();
-            System.out.println(Spirit.getSpirit());
-        }
+
         if (spacePressed && phase.equals("attackRoulette")) {
             setPhase("stopAttackRoulette");
         }
-        if (phase.equals("choosePokemon")) {
-            Pokemons[] pokemons = Ally.displayPokemons();
 
-            if (keyCode == KeyEvent.VK_1) {
-                System.out.println("1");
-                Ally.choosePokemon(pokemons[0]);
+        if (phase.equals("spirit")) {
+            Timer timer = new Timer(2000);
+            try {
+                timer.startTimer();
+            } catch (InterruptedException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
             }
-            if (keyCode == KeyEvent.VK_2) {
-                System.out.println("2");
-                Ally.choosePokemon(pokemons[1]);
+            if (spacePressed && (!timer.isTimesUp())) {
+                Spirit.increaseSpirit();
+                System.out.println(Spirit.getSpirit());
             }
-            if (keyCode == KeyEvent.VK_3) {
-                System.out.println("3");
-                Ally.choosePokemon(pokemons[2]);
-            }
-
+            if (timer.isTimesUp())
+                System.out.println("Times up");
+        }
+        if (spacePressed && phase.equals("stopPokeballRoulette")) {
+            System.out.println(PokeballRoulette.getBallSelected());
         }
 
     }

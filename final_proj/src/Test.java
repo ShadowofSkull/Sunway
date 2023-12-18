@@ -1,116 +1,15 @@
-import game_mechanics.Mash;
+import java.util.Random;
 
-public class Test {
-    public static void main(String[] args) throws InterruptedException {
-        Mash mash = new Mash();
-        mash.setPhase("attackRoulette");
-        String[] attackAnimationSlides = { "                                                       \r\n" + //
-                "               -------------------------               \r\n" + //
-                "             -/  +-------------------+  \\-             \r\n" + //
-                "           -/    | ----- |   |-----  |    \\-           \r\n" + //
-                "         -/      |       |   |       |      \\-         \r\n" + //
-                "       -/        | ----- |    -----| |        \\-       \r\n" + //
-                "     -/          |       |         | |          \\-     \r\n" + //
-                "   -/            | -----      -----  |            \\-   \r\n" + //
-                " -/              +-------------------+              \\- \r\n" + //
-                "|                                                     |\r\n" + //
-                "|                                                     |\r\n" + //
-                "|                                                     |\r\n" + //
-                "|                                                     |\r\n" + //
-                "|                                                     |\r\n" + //
-                "|       -----|  +---+               --|   +---+       |\r\n" + //
-                "|            |  |\\  |                 |   |\\  |       |\r\n" + //
-                "|      |-----   | \\ |                 |   | \\ |       |\r\n" + //
-                "|      |        |  -|                 |   |  -|       |\r\n" + //
-                " -      -----   +---+               ----  +---+      - \r\n" + //
-                "  \\-                                               -/  \r\n" + //
-                "    \\-                                           -/    \r\n" + //
-                "      \\-                                       -/      \r\n" + //
-                "        \\-                                   -/        \r\n" + //
-                "          \\-                               -/          \r\n" + //
-                "            \\-                           -/            \r\n" + //
-                "              \\-                       -/              \r\n" + //
-                "               -------------------------               ",
+import PokemonPack.Ally;
+import PokemonPack.Enemy;
+import PokemonPack.Pokemon;
+import PokemonPack.PokemonType;
+import PokemonPack.Stats;
 
-                "                                                       \r\n" + //
-                        "               -------------------------               \r\n" + //
-                        "             -/                         \\-             \r\n" + //
-                        "           -/      ----- |   |-----       \\-           \r\n" + //
-                        "         -/              |   |              \\-         \r\n" + //
-                        "       -/          ----- |    -----|          \\-       \r\n" + //
-                        "     -/                  |         |            \\-     \r\n" + //
-                        "   -/              -----      -----               \\-   \r\n" + //
-                        " -/                                                 \\- \r\n" + //
-                        "|                                                     |\r\n" + //
-                        "|                                                     |\r\n" + //
-                        "|                                                     |\r\n" + //
-                        "|                                                     |\r\n" + //
-                        "|    +----------------+                               |\r\n" + //
-                        "|    |  -----|  +---+ |             --|   +---+       |\r\n" + //
-                        "|    |       |  |\\  | |               |   |\\  |       |\r\n" + //
-                        "|    | |-----   | \\ | |               |   | \\ |       |\r\n" + //
-                        "|    | |        |  -| |               |   |  -|       |\r\n" + //
-                        " -   |  -----   +---+ |             ----  +---+      - \r\n" + //
-                        "  \\- +----------------+                            -/  \r\n" + //
-                        "    \\-                                           -/    \r\n" + //
-                        "      \\-                                       -/      \r\n" + //
-                        "        \\-                                   -/        \r\n" + //
-                        "          \\-                               -/          \r\n" + //
-                        "            \\-                           -/            \r\n" + //
-                        "              \\-                       -/              \r\n" + //
-                        "               -------------------------               ",
-                "                                                       \r\n" + //
-                        "               -------------------------               \r\n" + //
-                        "             -/                         \\-             \r\n" + //
-                        "           -/      ----- |   |-----       \\-           \r\n" + //
-                        "         -/              |   |              \\-         \r\n" + //
-                        "       -/          ----- |    -----|          \\-       \r\n" + //
-                        "     -/                  |         |            \\-     \r\n" + //
-                        "   -/              -----      -----               \\-   \r\n" + //
-                        " -/                                                 \\- \r\n" + //
-                        "|                                                     |\r\n" + //
-                        "|                                                     |\r\n" + //
-                        "|                                                     |\r\n" + //
-                        "|                                                     |\r\n" + //
-                        "|                                 +-------------+     |\r\n" + //
-                        "|       -----|  +---+             | --|   +---+ |     |\r\n" + //
-                        "|            |  |\\  |             |   |   |\\  | |     |\r\n" + //
-                        "|      |-----   | \\ |             |   |   | \\ | |     |\r\n" + //
-                        "|      |        |  -|             |   |   |  -| |     |\r\n" + //
-                        " -      -----   +---+             | ----  +---+ |    - \r\n" + //
-                        "  \\-                              +-------------+  -/  \r\n" + //
-                        "    \\-                                           -/    \r\n" + //
-                        "      \\-                                       -/      \r\n" + //
-                        "        \\-                                   -/        \r\n" + //
-                        "          \\-                               -/          \r\n" + //
-                        "            \\-                           -/            \r\n" + //
-                        "              \\-                       -/              \r\n" + //
-                        "               -------------------------               " };
-        while (mash.getPhase().equals("attackRoulette")) {
-            if (!mash.getPhase().equals("stopAttackRoulette")) {
-                System.out.println(attackAnimationSlides[0]);
-                Thread.sleep(500);
-            }
-            else{
-                break;
-            }
-            if (!mash.getPhase().equals("stopAttackRoulette")) {
-                System.out.println(attackAnimationSlides[1]);
-                Thread.sleep(500);
+public class Test{
 
-            }
-            else{
-                break;
-            }
-            if (!mash.getPhase().equals("stopAttackRoulette")) {
-                System.out.println(attackAnimationSlides[2]);
-                Thread.sleep(500);
- 
-            }
-            else{
-                break;
-            }
-        }
-
+    public static void main(String[] args) {
+        // System.out.println(Ally.displayPokemons());
+        System.out.println(Enemy.getEnemyPokemons());
     }
 }

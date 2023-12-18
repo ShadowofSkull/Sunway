@@ -1,6 +1,7 @@
 import java.util.Random;
 
-import Pokemon.Enemy;
+import PokemonPack.Enemy;
+import PokemonPack.Pokemon;
 import game_mechanics.Ball;
 import game_mechanics.PokeballRoulette;
 
@@ -24,7 +25,9 @@ public class Catch {
     }
 
     public static void pokeballCaught() {
-        int pokemonGrade = Enemy.getGrade();
+        Pokemon[] pokemonGrade = Enemy.getEnemyPokemons();
+        int pokemonGrade1 = pokemonGrade[0].getGrade();
+        int pokemonGrade2 = pokemonGrade[1].getGrade();
         Ball pokeball = PokeballRoulette.getBallSelected();
         int ballGrade = pokeball.getCatchGrade();
         int catchChance = (int) (pokeball.getCatchChance() * 10);
@@ -62,10 +65,15 @@ public class Catch {
         }
         
         // comparing grade of enemy pokemon to grade of pokeball and chance
-        if (pokemonGrade <= ballGrade && allowCatch) {
-            System.out.println("Pokemon caught");
+        if (pokemonGrade1 <= ballGrade && allowCatch) {
+            System.out.println("Pokemon1 caught");
         } else {
-            System.out.println("Pokemon not caught");
+            System.out.println("Pokemon1 not caught");
+        }
+        if (pokemonGrade2 <= ballGrade && allowCatch) {
+            System.out.println("Pokemon2 caught");
+        } else {
+            System.out.println("Pokemon2 not caught");
         }
     }
 }
