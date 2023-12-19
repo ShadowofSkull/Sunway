@@ -8,7 +8,7 @@ public class Spirit {
     }
 
     public static void increaseSpirit() {
-        Spirit.spirit += 1;
+        Spirit.spirit += 5;
     }
 
 }

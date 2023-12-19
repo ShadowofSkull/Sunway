@@ -1,7 +1,7 @@
 package game_mechanics;
 
 public class AttackRoulette extends Roulette {
-
+    private int damageBoost;
 
     public AttackRoulette(Mash mash) {
         super(mash);
@@ -91,6 +91,22 @@ public class AttackRoulette extends Roulette {
                         "               -------------------------               "};
 
         displayAnimation(attackAnimationSlides); 
-        
+        switch (super.getIndex()) {
+            case 0:
+                this.damageBoost = 35;
+                break;
+            case 1:
+                this.damageBoost = 20;
+                break;
+            case 2:
+                this.damageBoost = 10;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public int getDamageBoost() {
+        return damageBoost;
     }
 }

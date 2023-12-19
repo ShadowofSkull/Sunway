@@ -6,21 +6,31 @@ public class Ally {
     private static Pokemon[] allyPokemons = new Pokemon[2];
 
     public static void choosePokemon(Pokemon pokemon) {
-        allyPokemons[0] = Pokemon.getRandomPokemon();
+        allyPokemons[0] = clonePokemon(Pokemon.getRandomPokemon());
         allyPokemons[1] = pokemon;
+    }
+
+    // To clone pokemon and throw exception if it fails
+    private static Pokemon clonePokemon(Pokemon pokemon) {
+        try {
+            return (Pokemon) pokemon.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public static Pokemon[] getAllyPokemons() {
         return allyPokemons;
     }
 
+    // not necessary
     public static String toStringAllyPokemons() {
         return Arrays.toString(allyPokemons);
     }
 
     public static Pokemon[] displayPokemons() {
         System.out.println("Pick a pokemon by pressing 1-3 to choose: ");
-        System.out.println("Please pick within 5 seconds");
         Pokemon pokemon1 = Pokemon.getRandomPokemon();
         Pokemon pokemon2 = Pokemon.getRandomPokemon();
         Pokemon pokemon3 = Pokemon.getRandomPokemon();
@@ -31,6 +41,5 @@ public class Ally {
         Pokemon[] pokemons = { pokemon1, pokemon2, pokemon3 };
         return pokemons;
     }
-
 
 }

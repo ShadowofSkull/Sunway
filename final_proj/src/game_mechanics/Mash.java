@@ -38,14 +38,16 @@ public class Mash extends JFrame implements KeyListener {
     public void keyPressed(KeyEvent e) {
         // method not needed
     }
-
+    // Method to track keyboard input
     @Override
     public void keyReleased(KeyEvent e) {
+        // Get keycode of key pressed
         int keyCode = e.getKeyCode();
+        // Check if space is pressed
         boolean spacePressed = (keyCode == KeyEvent.VK_SPACE);
-
+        // Check if phase is choosePokemon
         if (phase.equals("choosePokemon")) {
-
+            // Let user pick one out of three pokemons
             if (keyCode == KeyEvent.VK_1) {
                 System.out.println("Picked 1, Game loading please wait");
                 Ally.choosePokemon(pokemons[0]);
@@ -63,21 +65,25 @@ public class Mash extends JFrame implements KeyListener {
             }
 
         }
+        // Battle phase
         if (spacePressed && phase.equals("battle")) {
             System.out.println("battle");
         }
 
+        // Attack roulette
         if (spacePressed && phase.equals("attackRoulette")) {
             setPhase("stopRoulette");
         }
 
+        // Spirit phase
         if (spacePressed && phase.equals("spirit")) {
-            System.out.println("Spirit increased");
             Spirit.increaseSpirit();
-            System.out.println(Spirit.getSpirit());
+            System.out.println("Spirit: " + Spirit.getSpirit());
         }
-        if (spacePressed && phase.equals("stopPokeballRoulette")) {
-            System.out.println(PokeballRoulette.getBallSelected());
+
+        // Pokeball roulette
+        if (spacePressed && phase.equals("pokeballRoulette")) {
+            setPhase("stopRoulette");
         }
 
     }
